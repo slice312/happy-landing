@@ -3,28 +3,64 @@
 <head>
     <title>Site</title>
     <link rel="stylesheet" href="styles/index.css">
+    <script type="module" src="js/app.js"></script>
 </head>
 <body>
 <div class="container">
     <header class="header">
         <nav class="nav-header">
-            <img class="nav-header__logo" src="assets/images/happy-logo.png" alt="logo">
+            <img class="nav-header__logo" src="assets/icons/app-logo-happy.svg" alt="logo">
             <ul class="nav-header__menu">
                 <li class="nav-header__item">Features</li>
                 <li class="nav-header__item">Pricing</li>
                 <li class="nav-header__item">Testimonials</li>
                 <li class="nav-header__item">FAQ</li>
                 <li>
-                    <button class="btn-default nav-header__item-btn" type="button">Get this app</button>
+                    <button id="get-app-btn" class="btn-default nav-header__item-btn" type="button">Get this app
+                    </button>
                 </li>
             </ul>
         </nav>
-
     </header>
+
+    <main>
+        <div id="ad-countdown-timer" class="ad-countdown-timer">
+            <div class="ad-countdown-timer__container">
+                <h1 class="ad-countdown-timer__title">
+                    Big sale on lifetime plan
+                </h1>
+                <h2 class="ad-countdown-timer__sub-title">
+                    there is very little left
+                </h2>
+                <div class="ad-countdown-timer__digits">
+                    <div class="ad-countdown-timer__digit-wrap">
+                        <p id="timer-days">00</p>
+                        <p class="ad-countdown-timer__digit-meaning-label">days</p>
+                    </div>
+                    <p>|</p>
+                    <div class="ad-countdown-timer__digit-wrap">
+                        <p id="timer-hours">00</p>
+                        <p class="ad-countdown-timer__digit-meaning-label">hours</p>
+                    </div>
+                    <p>|</p>
+                    <div class="ad-countdown-timer__digit-wrap">
+                        <p id="timer-minutes">00</p>
+                        <p class="ad-countdown-timer__digit-meaning-label">minutes</p>
+                    </div>
+                    <p>|</p>
+                    <div class="ad-countdown-timer__digit-wrap">
+                        <p id="timer-seconds">00</p>
+                        <p class="ad-countdown-timer__digit-meaning-label">seconds</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
 </div>
-
-
-
 
 
 </body>

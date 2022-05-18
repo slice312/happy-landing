@@ -1,12 +1,8 @@
 @import "null.css";
 @import "global.css";
 @import "header.css";
+@import "ad-countdown-timer.css";
 
-
-.container {
-    max-width: var(--max-width-container);
-    margin: 0 auto;
-}
 
 .btn-default {
     background-color: var(--color-primary);
@@ -19,3 +15,9 @@
 
     border-radius: 4px;
 }
+
+.container {
+    max-width: var(--max-width-container);
+    margin: 0 auto;
+}
+
