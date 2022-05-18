@@ -1,23 +1,11 @@
 @import "null.css";
 @import "global.css";
+@import "elements/buttons.css";
 @import "header.css";
 @import "ad-countdown-timer.css";
 
-
-.btn-default {
-    background-color: var(--color-primary);
-
-    color: var(--text-color-white);
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 18px;
-    letter-spacing: 2px;
-
-    border-radius: 4px;
-}
 
 .container {
     max-width: var(--max-width-container);
     margin: 0 auto;
 }
-
