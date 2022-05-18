@@ -1,0 +1,21 @@
+@import "null.css";
+@import "global.css";
+@import "header.css";
+
+
+.container {
+    max-width: var(--max-width-container);
+    margin: 0 auto;
+}
+
+.btn-default {
+    background-color: var(--color-primary);
+
+    color: var(--text-color-white);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 2px;
+
+    border-radius: 4px;
+}
