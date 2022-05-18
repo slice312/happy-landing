@@ -1,8 +1,8 @@
 import {registerControls} from "./controls/index.js";
 
 
-const app = async () => {
-   await registerControls();
+const app = () => {
+    registerControls();
 };
 
 document.addEventListener("DOMContentLoaded", app);

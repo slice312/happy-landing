@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 
+
 :root {
     --default-font-family: Poppins, normal;
+
     --max-width-container: 1440px;
 
     /* Брекпоинты */
@@ -12,7 +14,7 @@
 
     /* Цвета */
     --color-primary: #222222;
-    --text-color-white:  #FFFFFF;
+    --text-color-white: #FFFFFF;
     --text-color-gray: #666666;
 }
 

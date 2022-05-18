@@ -1,6 +1,6 @@
-import {setCountdownTimer} from "./countdown-timer.js";
+import {registerAdCountdownTimer} from "./countdown-timer.js";
 
 
-export const registerControls = async () => {
-    await setCountdownTimer();
+export const registerControls = () => {
+    registerAdCountdownTimer();
 };

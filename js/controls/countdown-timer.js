@@ -1,48 +1,46 @@
+import {config} from "/js/config.js";
 import {Utils} from "/js/utils.js";
-import {getConfig} from "/js/config.js";
-
 
 const padWithZero = Utils.String.padWithZero;
 
 
-const setCountdownTimer = async () => {
+const registerAdCountdownTimer = () => {
     const daysElem = document.getElementById("timer-days");
     const hoursElem = document.getElementById("timer-hours");
     const minutesElem = document.getElementById("timer-minutes");
     const secondsElem = document.getElementById("timer-seconds");
 
-    const timerEndDate = await getTimerEndDate();
+    const timerEndDate = getTimerEndDate();
 
     const handler = setInterval(() => {
         const now = new Date();
         const timeSpan = timerEndDate - now;
 
         if (timeSpan <= 0) {
-            const adTimeBlock = document.getElementById("ad-countdown-timer");
-            adTimeBlock.remove();
+            const timerElement = document.getElementById("ad-countdown-timer");
+            timerElement.remove();
             clearInterval(handler);
             return;
         }
 
-        const dateTimeParts = getDateTimeParts(timeSpan);
+        const timeSpanParts = getTimeSpanParts(timeSpan);
 
-        daysElem.innerHTML = padWithZero(dateTimeParts.days, 2);
-        hoursElem.innerHTML = padWithZero(dateTimeParts.hours, 2);
-        minutesElem.innerHTML = padWithZero(dateTimeParts.minutes, 2);
-        secondsElem.innerHTML = padWithZero(dateTimeParts.seconds, 2);
+        daysElem.innerHTML = padWithZero(timeSpanParts.days, 2);
+        hoursElem.innerHTML = padWithZero(timeSpanParts.hours, 2);
+        minutesElem.innerHTML = padWithZero(timeSpanParts.minutes, 2);
+        secondsElem.innerHTML = padWithZero(timeSpanParts.seconds, 2);
     }, 1000);
 };
 
 
-const getTimerEndDate = async () => {
-    const config = await getConfig();
+const getTimerEndDate = () => {
     return (config.timerEndDate)
         ? Utils.Date.parseDateWithDefaultFormat(config.timerEndDate)
         : new Date();
 };
 
 
-const getDateTimeParts = (timeSpan) => {
+const getTimeSpanParts = (timeSpan) => {
     const second = 1000;
     const minute = second * 60;
     const hour = minute * 60;
@@ -57,4 +55,4 @@ const getDateTimeParts = (timeSpan) => {
 };
 
 
-export {setCountdownTimer};
+export {registerAdCountdownTimer};
