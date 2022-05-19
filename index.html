@@ -9,7 +9,7 @@
 <div class="container">
     <header class="header">
         <nav class="nav-header">
-            <img class="nav-header__logo" src="assets/icons/app-logo-happy.svg" alt="logo">
+            <img class="nav-header__logo" src="assets/icons/app-logo-happy.svg" alt="app-logo-happy">
             <ul class="nav-header__menu">
                 <!-- TODO: сделать anchor ссылки когда сверстаю блоки -->
                 <li class="nav-header__item">Features</li>
@@ -17,8 +17,7 @@
                 <li class="nav-header__item">Testimonials</li>
                 <li class="nav-header__item">FAQ</li>
                 <li>
-                    <!-- TODO: кнопка пока ничего не делает -->
-                    <button id="get-app-btn" class="btn-default nav-header__item-btn" type="button">
+                    <button id="btn-get-app" class="btn-default nav-header__item-btn" type="button">
                         Get this app
                     </button>
                 </li>
@@ -26,40 +25,60 @@
         </nav>
     </header>
 
-    <main>
-        <div id="ad-countdown-timer" class="ad-countdown-timer">
-            <div class="ad-countdown-timer__container">
-                <h1 class="ad-countdown-timer__title">
-                    Big sale on lifetime plan
-                </h1>
-                <p class="ad-countdown-timer__sub-title">
-                    there is very little left
-                </p>
-                <div class="ad-countdown-timer__digits">
-                    <div class="ad-countdown-timer__digit-wrap">
-                        <p id="timer-days">00</p>
-                        <p class="ad-countdown-timer__digit-meaning-label">days</p>
-                    </div>
-                    <span>|</span>
-                    <div class="ad-countdown-timer__digit-wrap">
-                        <p id="timer-hours">00</p>
-                        <p class="ad-countdown-timer__digit-meaning-label">hours</p>
-                    </div>
-                    <span>|</span>
-                    <div class="ad-countdown-timer__digit-wrap">
-                        <p id="timer-minutes">00</p>
-                        <p class="ad-countdown-timer__digit-meaning-label">minutes</p>
-                    </div>
-                    <span>|</span>
-                    <div class="ad-countdown-timer__digit-wrap">
-                        <p id="timer-seconds">00</p>
-                        <p class="ad-countdown-timer__digit-meaning-label">seconds</p>
-                    </div>
+    <section id="ad-countdown-timer" class="ad-countdown-timer">
+        <div class="ad-countdown-timer__container">
+            <h2 class="ad-countdown-timer__title">
+                Big sale on lifetime plan
+            </h2>
+            <p class="ad-countdown-timer__sub-title">
+                there is very little left
+            </p>
+            <div class="ad-countdown-timer__digits">
+                <div class="ad-countdown-timer__digit-wrap">
+                    <p id="timer-days">00</p>
+                    <p class="ad-countdown-timer__digit-meaning-label">days</p>
+                </div>
+                <span>|</span>
+                <div class="ad-countdown-timer__digit-wrap">
+                    <p id="timer-hours">00</p>
+                    <p class="ad-countdown-timer__digit-meaning-label">hours</p>
+                </div>
+                <span>|</span>
+                <div class="ad-countdown-timer__digit-wrap">
+                    <p id="timer-minutes">00</p>
+                    <p class="ad-countdown-timer__digit-meaning-label">minutes</p>
+                </div>
+                <span>|</span>
+                <div class="ad-countdown-timer__digit-wrap">
+                    <p id="timer-seconds">00</p>
+                    <p class="ad-countdown-timer__digit-meaning-label">seconds</p>
                 </div>
             </div>
         </div>
-    </main>
+    </section>
 
+    <main>
+        <section class="app-preview">
+            <div class="app-preview-info">
+                <img class="app-preview-info__logo" src="assets/icons/app-logo-happy.svg" alt="app-logo-happy">
+                <article>
+                    <h1 class="app-preview-info__title">The future of digital photos.</h1>
+                    <p class="app-preview-info__description">The H(app)y app is the latest & greatest in phone photography. It's available in the App Store right now. Go check it out!</p>
+                </article>
+                <div class="app-preview-info__buttons">
+                    <button id="btn-buy-now" class="btn-default app-preview-info__button">
+                        Buy now
+                    </button>
+                    <button id="btn-read-more" class="btn-default app-preview-info__button">
+                        Read more
+                    </button>
+                </div>
+            </div>
+            <div class="app-preview__image">
+                <img src="assets/images/cuted-phone.svg" alt="cuted-phone">
+            </div>
+        </section>
+    </main>
     <footer>
 
     </footer>

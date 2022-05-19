@@ -3,9 +3,11 @@
 @import "elements/buttons.css";
 @import "header.css";
 @import "ad-countdown-timer.css";
+@import "app-preview.css";
 
 
 .container {
     max-width: var(--max-width-container);
     margin: 0 auto;
 }
+
