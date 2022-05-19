@@ -1,58 +1,73 @@
 import {config} from "/js/config.js";
 import {Utils} from "/js/utils.js";
 
-const padWithZero = Utils.String.padWithZero;
+
+export class CountdownTimer {
+    #dom = {
+        timerElement: document.getElementById("ad-countdown-timer"),
+        daysElem: document.getElementById("timer-days"),
+        hoursElem: document.getElementById("timer-hours"),
+        minutesElem: document.getElementById("timer-minutes"),
+        secondsElem: document.getElementById("timer-seconds")
+    };
+
+    #timerEndDate;
 
 
-const registerAdCountdownTimer = () => {
-    const daysElem = document.getElementById("timer-days");
-    const hoursElem = document.getElementById("timer-hours");
-    const minutesElem = document.getElementById("timer-minutes");
-    const secondsElem = document.getElementById("timer-seconds");
+    constructor() {
+    }
 
-    const timerEndDate = getTimerEndDate();
+    runTimer(timerEndDate) {
+        this.#timerEndDate = timerEndDate;
 
-    const handler = setInterval(() => {
-        const now = new Date();
-        const timeSpan = timerEndDate - now;
-
-        if (timeSpan <= 0) {
-            const timerElement = document.getElementById("ad-countdown-timer");
-            timerElement.remove();
-            clearInterval(handler);
-            return;
+        const timeSpan = this.#timerEndDate - new Date();
+        if (timeSpan <= 0)
+            this.#removeControlFromDom();
+        else {
+            this.#showControl();
+            this.#setTimerValues(timeSpan);
+            this.#runTimer();
         }
+    }
 
-        const timeSpanParts = getTimeSpanParts(timeSpan);
+    #runTimer() {
+        const handler = setInterval(() => {
+            const timeSpan = this.#timerEndDate - new Date();
+            if (timeSpan <= 0) {
+                this.#removeControlFromDom();
+                clearInterval(handler);
+                return;
+            }
 
-        daysElem.innerHTML = padWithZero(timeSpanParts.days, 2);
-        hoursElem.innerHTML = padWithZero(timeSpanParts.hours, 2);
-        minutesElem.innerHTML = padWithZero(timeSpanParts.minutes, 2);
-        secondsElem.innerHTML = padWithZero(timeSpanParts.seconds, 2);
-    }, 1000);
-};
+            this.#setTimerValues(timeSpan);
+        }, 1000);
+    }
+
+    #setTimerValues(timeSpan) {
+        const padWithZero = Utils.String.padWithZero;
+        const timeSpanParts = Utils.Date.getTimeSpanParts(timeSpan);
+
+        this.#dom.daysElem.textContent = padWithZero(timeSpanParts.days, 2);
+        this.#dom.hoursElem.textContent = padWithZero(timeSpanParts.hours, 2);
+        this.#dom.minutesElem.textContent = padWithZero(timeSpanParts.minutes, 2);
+        this.#dom.secondsElem.textContent = padWithZero(timeSpanParts.seconds, 2);
+    }
+
+    #removeControlFromDom() {
+        this.#dom.timerElement.remove();
+    }
+
+    #showControl() {
+        this.#dom.timerElement.style.visibility = "visible";
+    }
+}
 
 
-const getTimerEndDate = () => {
-    return (config.timerEndDate)
+export const registerAdCountdownTimer = () => {
+    const timerEndDate = (config.timerEndDate)
         ? Utils.Date.parseDateWithDefaultFormat(config.timerEndDate)
         : new Date();
+
+    const timer = new CountdownTimer();
+    timer.runTimer(timerEndDate)
 };
-
-
-const getTimeSpanParts = (timeSpan) => {
-    const second = 1000;
-    const minute = second * 60;
-    const hour = minute * 60;
-    const day = hour * 24;
-
-    return {
-        days: Math.floor(timeSpan / day),
-        hours: Math.floor((timeSpan % day) / hour),
-        minutes: Math.floor((timeSpan % hour) / minute),
-        seconds: Math.floor((timeSpan % minute) / second)
-    };
-};
-
-
-export {registerAdCountdownTimer};

@@ -21,7 +21,6 @@ ul li {
     list-style: none;
 }
 
-
 :focus, :active {
     outline: none;
 }

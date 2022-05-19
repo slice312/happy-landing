@@ -14,6 +14,25 @@ const parseDateWithDefaultFormat = (dateTimeStr) => {
 };
 
 /**
+ * @param {number} timeSpan
+ * @returns {{hours: number, seconds: number, minutes: number, days: number}}
+ */
+const getTimeSpanParts = (timeSpan) => {
+    const second = 1000;
+    const minute = second * 60;
+    const hour = minute * 60;
+    const day = hour * 24;
+
+    return {
+        days: Math.floor(timeSpan / day),
+        hours: Math.floor((timeSpan % day) / hour),
+        minutes: Math.floor((timeSpan % hour) / minute),
+        seconds: Math.floor((timeSpan % minute) / second)
+    };
+};
+
+
+/**
  * Приводит число к строке заполняя leading zeroes под указанную длину.
  * @param {number} num - Число
  * @param {number} targetLength - Длина строки
@@ -26,7 +45,8 @@ const padWithZero = (num, targetLength) => {
 
 export const Utils = {
     Date: {
-        parseDateWithDefaultFormat
+        parseDateWithDefaultFormat,
+        getTimeSpanParts
     },
     String: {
         padWithZero
