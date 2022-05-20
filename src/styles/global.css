@@ -13,11 +13,16 @@
     --md4: 480px;
 
     /* Цвета */
+    --color-background: "нету";
+
     --color-primary: #222222;
+    --color-white: #FFFFFF;
+    --color-dark-beige: #F2F2F2;
     --color-dark-gray: #4E4E4E;
     --color-blue: #5AB0FF;
     --color-light-blue: #00C6DF;
     --color-dark-blue: #0278ED;
+
     --text-color-primary: #222222;
     --text-color-white: #FFFFFF;
     --text-color-gray: #666666;

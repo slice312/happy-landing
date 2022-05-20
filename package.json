@@ -1,0 +1,33 @@
+{
+  "name": "zeon_module1_happylanding",
+  "version": "1.0.0",
+  "description": "SPA on vanilla js css",
+  "author": "slice312",
+  "license": "MIT",
+  "private": true,
+  "homepage": "https://github.com/slice312/zeon_module1_happyLanding#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slice312/zeon_module1_happyLanding.git"
+  },
+  "bugs": {
+    "url": "https://github.com/slice312/zeon_module1_happyLanding/issues"
+  },
+  "keywords": [
+    "spa"
+  ],
+  "scripts": {
+    "start": "webpack --config webpack.config.js",
+    "build": "webpack"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.7.1",
+    "css-minimizer-webpack-plugin": "^4.0.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.0",
+    "style-loader": "^3.3.1",
+    "webpack-cli": "^4.9.2"
+  }
+}

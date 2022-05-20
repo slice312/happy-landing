@@ -1,6 +1,6 @@
 .ad-countdown-timer {
     visibility: hidden;
-    background-image: url("/assets/images/ad-countdown-timer-background.svg");
+    background-image: url("/src/assets/images/ad-countdown-timer-background.svg");
     width: 100%;
     height: 436px;
     display: flex;

@@ -1,5 +1,5 @@
-import {config} from "/js/config.js";
-import {Utils} from "/js/utils.js";
+import {config} from "/src/config.js";
+import {Utils} from "/src/app/utils.js";
 
 
 export class CountdownTimer {
@@ -64,10 +64,6 @@ export class CountdownTimer {
 
 
 export const registerAdCountdownTimer = () => {
-    const timerEndDate = (config.timerEndDate)
-        ? Utils.Date.parseDateWithDefaultFormat(config.timerEndDate)
-        : new Date();
-
     const timer = new CountdownTimer();
-    timer.runTimer(timerEndDate)
+    timer.runTimer(config.timerEndDate)
 };

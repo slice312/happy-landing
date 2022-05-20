@@ -1,11 +1,9 @@
 .app-preview {
     height: 640px;
-
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-
     overflow: hidden;
 }
 

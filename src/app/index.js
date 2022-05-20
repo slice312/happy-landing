@@ -1,8 +1,7 @@
 import {registerControls} from "./controls/index.js";
+// import "/styles/index.css";
 
 
-const app = () => {
+export const app = () => {
     registerControls();
 };
-
-document.addEventListener("DOMContentLoaded", app);
