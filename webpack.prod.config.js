@@ -10,7 +10,7 @@ module.exports = {
     mode: "production",
     entry: "./src/index.js",
     output: {
-        filename: "bundle.js",
+        filename: "bundle.[contenthash].js",
         path: path.resolve(__dirname, "./build")
     },
     plugins: [
@@ -19,11 +19,14 @@ module.exports = {
             inject: "body"
         }),
         new MiniCssExtractWebpackPlugin({
-            filename: "main.css"
+            filename: "styles.[contenthash].css"
         }),
         new CopyWebpackPlugin({
             patterns: [
-                { from: "./src/assets", to: "./src/assets" },
+                {
+                    from: "./src/assets",
+                    to: "./src/assets"
+                }
             ]
         }),
         new CleanWebpackPlugin()
