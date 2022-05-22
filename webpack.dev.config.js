@@ -5,6 +5,7 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 const {CleanWebpackPlugin} = require("clean-webpack-plugin");
 
 
+
 module.exports = {
     mode: "development",
     devtool: "source-map",
@@ -12,6 +13,11 @@ module.exports = {
     output: {
         filename: "bundle.js",
         path: path.resolve(__dirname, "./build")
+    },
+    devServer: {
+        port: 5000,
+        static : "./build",
+        hot: true
     },
     plugins: [
         new HtmlWebpackPlugin({
