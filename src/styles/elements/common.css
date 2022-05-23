@@ -1,0 +1,25 @@
+.common-title {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--text-color-primary);
+}
+
+.common-sub-title {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 36px;
+    text-align: center;
+    color: var(--text-color-primary);
+}
+
+
+.common-description {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--text-color-primary);
+}

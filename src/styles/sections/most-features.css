@@ -1,0 +1,43 @@
+.most-feature-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+}
+
+.most-feature-container__info {
+    max-width: 420px;
+    max-height: 290px;
+}
+
+.most-feature-container__title {
+    text-align: left;
+}
+
+.most-feature-container__sub-title {
+    margin-top: 5px;
+    text-align: left;
+}
+
+.most-feature-container__description {
+    margin-top: 15px;
+    text-align: left;
+    color: var(--text-color-gray);
+}
+
+.most-feature-container__image {
+    margin-top: 289px;
+    max-width: 376px;
+    max-height: 745px;
+}
+
+.technology {
+    max-height: 652px;
+    background-color: var(--color-white);  /* TODO: тут другой цвет*/
+}
+
+.speed-and-security {
+    max-height: 644px;
+    background-color: var(--color-dark-beige);
+}

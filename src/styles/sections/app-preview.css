@@ -1,5 +1,5 @@
 .app-preview {
-    height: 640px;
+    max-height: 640px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -29,10 +29,6 @@
 
 .app-preview-info__description {
     margin-top: 17px;
-    color: var(--text-color-primary);
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
 }
 
 .app-preview-info__buttons {
@@ -49,4 +45,6 @@
 
 .app-preview__image {
     margin-top: 289px;
+    max-width: 376px;
+    max-height: 745px;
 }
