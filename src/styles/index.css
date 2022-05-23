@@ -1,10 +1,10 @@
 @import "null.css";
 @import "global.css";
 @import "elements/buttons.css";
-@import "header.css";
-@import "ad-countdown-timer.css";
-@import "app-preview.css";
-@import "features.css";
+@import "sections/header.css";
+@import "sections/ad-countdown-timer.css";
+@import "sections/app-preview.css";
+@import "sections/features.css";
 
 
 .container {

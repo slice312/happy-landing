@@ -1,5 +1,5 @@
-
 .features {
+    padding: 132px 0 68px 0;
     background-color: var(--color-primary);
 }
 
@@ -10,6 +10,7 @@
     line-height: 20px;
     letter-spacing: 2px;
     text-align: center;
+    text-transform: uppercase;
 }
 
 .features__subtitle {
@@ -51,6 +52,8 @@
     justify-content: center;
     padding-top: 40px;
     overflow: hidden;
+
+    background-color: var(--color-white);
 }
 
 .feature-card__image {
@@ -93,7 +96,6 @@
 .feature-card__icon_violet {
     background-color: var(--color-violet);
 }
-
 
 
 .feature-card__description-container {
