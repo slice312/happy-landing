@@ -1,5 +1,12 @@
 .header {
+    position: sticky;
+    z-index: 1;
+    top: 0;
+
     padding: 0 120px;
+
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
+    background-color: var(--color-bg1);
 }
 
 .nav-header {

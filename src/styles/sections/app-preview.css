@@ -45,6 +45,6 @@
 
 .app-preview__image {
     margin-top: 289px;
-    max-width: 376px;
-    max-height: 745px;
+    width: 376px;
+    height: 745px;
 }

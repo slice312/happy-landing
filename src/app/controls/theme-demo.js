@@ -1,30 +1,23 @@
+export const registerThemeDemoBlock = () => {
+    const themeBlock = document.getElementById("theme-demo-block");
+    const btnLightMode = document.getElementById("theme-demo-button-light-mode");
+    const btnDarkMode = document.getElementById("theme-demo-button-dark-mode");
+    const otherThemeLabel = document.getElementById("theme-demo-other-theme-name");
+    const currentThemeLabel = document.getElementById("theme-demo-name");
 
-
-export const reg = () => {
-
-    const block = document.getElementById("theme-demo-block");
-    const btnLightMode = document.getElementById("theme-button-light-mode");
-    const lightMode = {
-        icon: document.getElementById("theme-button-light-mode-icon"),
-        text: document.getElementById("theme-button-light-mode-text")
-    };
-
-    const darkMode = {
-        icon: document.getElementById("theme-button-dark-mode-icon"),
-        text: document.getElementById("theme-button-dark-mode-text")
-    };
 
     btnLightMode.onclick = () => {
-        block.classList.add();
+        themeBlock.classList.add("theme-demo_light");
+        themeBlock.classList.remove("theme-demo_dark");
+        otherThemeLabel.textContent = "dark";
+        currentThemeLabel.textContent = "Light mode";
+    };
 
-        lightMode.icon.classList.toggle("theme-demo__button_selected");
-        lightMode.text.classList.toggle("theme-demo__button_selected");
-
-        darkMode.icon.classList.toggle("theme-demo__button_selected");
-        darkMode.icon.classList.add("theme-demo__button_light-inactive");
-
-        darkMode.text.classList.toggle("theme-demo__button_selected");
-        darkMode.text.classList.add("theme-demo__button_light-inactive");
+    btnDarkMode.onclick = () => {
+        themeBlock.classList.add("theme-demo_dark");
+        themeBlock.classList.remove("theme-demo_light");
+        otherThemeLabel.textContent = "light";
+        currentThemeLabel.textContent = "Dark mode";
     };
 };
 
