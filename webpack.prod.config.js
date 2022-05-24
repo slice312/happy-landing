@@ -5,7 +5,7 @@ const CssMinimizerWebpackPlugin = require("css-minimizer-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const {CleanWebpackPlugin} = require("clean-webpack-plugin");
 
-
+// TODO: pass mode, в один кофинг переделать
 module.exports = {
     mode: "production",
     entry: "./src/index.js",

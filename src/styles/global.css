@@ -15,6 +15,13 @@
     /* Цвета */
     --color-background: "нету";
 
+    --color-bg2: #F2F2F2;
+
+
+    --color-pricing-plan1: #0278ED;
+    --color-pricing-plan2: #FF5437;
+    --color-pricing-plan3: #FF9209;
+
     --color-primary: #222222;
     --color-white: #FFFFFF;
     --color-dark-beige: #F2F2F2;
@@ -26,6 +33,12 @@
     --color-orange: #FF9209;
     --color-pink: #E738CE;
     --color-violet: #B25DF8;
+
+    --color-theme-selected: #FF9209;
+    --color-theme-dark-bg: #222222;
+    --color-theme-dark-inactive: #FFFFFF;
+    --color-theme-light-bg: #FFFFFF;
+    --color-theme-light-inactive: #222222;
 
 
     --text-color-primary: #222222;

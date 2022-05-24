@@ -27,14 +27,14 @@
 }
 
 .most-feature-container__image {
-    margin-top: 289px;
+    margin-top: 292px;
     max-width: 376px;
     max-height: 745px;
 }
 
 .technology {
     max-height: 652px;
-    background-color: var(--color-white);  /* TODO: тут другой цвет*/
+    background-color: var(--color-white);
 }
 
 .speed-and-security {

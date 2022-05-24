@@ -1,0 +1,114 @@
+.pricing {
+    max-height: 702px;
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.pricing__container {
+    max-width: 1200px;
+    max-height: 502px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.pricing__info {
+    max-width: 600px;
+    max-height: 124px;
+    padding: 0 16px;
+}
+
+.pricing__title {
+
+}
+
+.pricing__sub-title {
+    margin-top: 5px;
+}
+
+.pricing__description {
+    margin-top: 14px;
+    font-size: 18px;
+    text-align: center;
+    color: var(--text-color-gray);
+}
+
+.pricing__plans-container {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.pricing__item {
+}
+
+.plan-card {
+    width: 379px;
+    height: 338px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 49px 40px 50px 40px;
+
+    border-radius: 20px;
+    background-color: var(--color-bg2);
+}
+
+.plan-card__title {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--color-pricing-plan1);
+}
+
+.plan-card__price {
+    font-size: 108px;
+    font-weight: 400;
+    line-height: 124px;
+    letter-spacing: 8px;
+    color: var(--color-pricing-plan1);
+}
+
+.plan-card__period {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-color-primary);
+}
+
+.plan-card__button-buy {
+    width: 129px;
+    height: 40px;
+    text-transform: uppercase;
+}
+
+.plan-card__text_plan1 {
+    color: var(--color-pricing-plan1);
+}
+
+.plan-card__text_plan2 {
+    color: var(--color-pricing-plan2);
+}
+
+.plan-card__text_plan3 {
+    color: var(--color-pricing-plan3);
+}
+
+.plan-card__button-buy_plan1 {
+    background-color: var(--color-pricing-plan1);
+}
+
+.plan-card__button-buy_plan2 {
+    background-color: var(--color-pricing-plan2);
+}
+
+.plan-card__button-buy_plan3 {
+    background-color: var(--color-pricing-plan3);
+}
