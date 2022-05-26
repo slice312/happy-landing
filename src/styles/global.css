@@ -39,9 +39,17 @@
     --text-color-primary: #222222;
     --text-color-white: #FFFFFF;
     --text-color-gray: #666666;
+
+
+    /* Controls */
+    --color-ui-focus-outline: #5AB0FF;
 }
 
 body {
     font-family: var(--default-font-family);
     font-weight: 400;
+}
+
+body.modal-open {
+    overflow: hidden;
 }

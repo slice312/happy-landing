@@ -1,7 +1,9 @@
 @import "null.css";
 @import "global.css";
-@import "elements";
+@import "atoms";
 @import "sections";
+
+
 
 
 .limit-container {

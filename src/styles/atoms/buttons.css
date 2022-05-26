@@ -19,5 +19,5 @@
 }
 
 .btn-default:focus {
-    outline: 2px solid var(--color-blue);
+    outline: 2px solid var(--color-ui-focus-outline);
 }

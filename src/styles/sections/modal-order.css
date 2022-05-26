@@ -1,0 +1,140 @@
+.modal-order {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 5;
+
+    visibility: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-order_open {
+    visibility: visible;
+}
+
+.modal-order__bg {
+    position: absolute;
+    background: #000000;
+    opacity: 35%;
+    width: 100%;
+    height: 100%;
+}
+
+.modal-order__container {
+    position: relative;
+
+    max-width: 506px;
+    max-height: 473px;
+    width: 506px;
+    height: 473px;
+
+    display: flex;
+    justify-content: center;
+    /*align-items: center;*/
+
+    border-radius: 4px;
+    background-color: var(--color-bg1);
+
+    /* TODO: убрать*/
+    color: red;
+}
+
+.modal-order__title-wrap {
+    width: 312px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.modal-order__title {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.plan-radio-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.plan-radio-buttons__item {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.plan-radio-buttons__input[type="radio"] {
+    display:none;
+}
+
+.plan-radio-buttons__label {
+    width: 100%;
+    height: 42px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+
+    border-radius: 4px;
+
+    --color-text: inherit;
+    --color-border: inherit;
+    --color-bg: #FAFAFA;
+
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+    background-color: var(--color-bg);
+}
+
+.plan-radio-buttons__icon {
+    position: absolute;
+    left: 13px;
+    fill: #FAFAFA;
+}
+
+.plan-radio-buttons__label_plan1 {
+    --color-text:  #0278ED;
+    --color-border:  #0278ED;
+}
+
+.plan-radio-buttons__label_plan2 {
+    --color-text: #FF5437;
+    --color-border: #FF5437;
+}
+
+.plan-radio-buttons__label_plan3 {
+    --color-text: #FF9209;
+    --color-border: #FF9209;
+}
+
+.plan-radio-buttons__label_selected {
+    --color-bg: var(--color-border);
+    --color-text: #FAFAFA;
+}
+
+
+
+.modal-close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    outline: none;
+    appearance: none;
+    color: red;
+    background: none;
+    border: 0px;
+    font-weight: bold;
+    cursor: pointer;
+}
