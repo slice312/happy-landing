@@ -1,5 +1,5 @@
 import {app} from "./app/index.js";
-import "./index.css";
+import "./styles/index.css";
 
 
 document.addEventListener("DOMContentLoaded", app);

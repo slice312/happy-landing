@@ -1,13 +1,14 @@
 .statistic {
-    max-height: 316px;
+    background-color: var(--color-red);
+}
 
+.statistic__container {
+    max-height: 316px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 80px 199px 100px 199px;
-
-    background-color: var(--color-red);
 }
 
 .statistic__item {

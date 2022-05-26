@@ -4,7 +4,7 @@
 @import "sections";
 
 
-.container {
+.limit-container {
     max-width: var(--max-width-container);
     margin: 0 auto;
 }

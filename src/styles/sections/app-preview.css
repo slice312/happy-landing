@@ -1,4 +1,8 @@
 .app-preview {
+    background-color: var(--color-bg1);
+}
+
+.app_preview__container {
     max-height: 640px;
     display: flex;
     flex-direction: row;
