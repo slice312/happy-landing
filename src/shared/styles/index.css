@@ -1,13 +1,9 @@
 @import "null.css";
 @import "global.css";
-@import "atoms";
-@import "sections";
-
-
+@import "atoms/index.css";
 
 
 .limit-container {
     max-width: var(--max-width-container);
     margin: 0 auto;
 }
-

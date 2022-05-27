@@ -1,7 +1,9 @@
-import {registerAdCountdownTimer} from "./countdown-timer.js";
-import {registerThemeDemoBlock} from "./theme-demo.js";
+import "./sections/index.css";
 
-import {ModalOrder} from "./modal-order.js";
+import {registerAdCountdownTimer} from "./ad-countdown-timer";
+import {registerThemeDemoBlock} from "./theme-demo";
+import {ModalOrder} from "./modal-order";
+
 
 export const registerControls = () => {
     registerAdCountdownTimer();

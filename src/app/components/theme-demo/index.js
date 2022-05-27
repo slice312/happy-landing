@@ -1,3 +1,6 @@
+import "./styles.css";
+
+
 export const registerThemeDemoBlock = () => {
     const themeBlock = document.getElementById("theme-demo-block");
     const otherThemeLabel = document.getElementById("theme-demo-other-theme-name");

@@ -1,5 +1,6 @@
 import {config} from "/src/config.js";
 import {Utils} from "/src/app/utils.js";
+import "./styles.css";
 
 
 export class CountdownTimer {

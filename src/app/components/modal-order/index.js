@@ -1,3 +1,4 @@
+import "./styles.css";
 
 export class ModalOrder {
     #rootControl = document.getElementById("modal-order");
