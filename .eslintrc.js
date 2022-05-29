@@ -2,16 +2,13 @@ module.exports = {
     parserOptions: {
         sourceType: "module",
         allowImportExportEverywhere: true,
-        ecmaVersion: 11,
-        ecmaFeatures: {
-            jsx: true
-        }
+        ecmaVersion: 11
     },
     rules: {
         semi: ["error", "always"],
-        quotes: ["warn", "double"], // строковые литеры в кавычках
+        quotes: ["warn", "double"],
         "comma-dangle": ["warn"],
-        "no-multiple-empty-lines": 0,
+        "no-multiple-empty-lines": "off",
         indent: ["warn", 4, {SwitchCase: 1}]
     }
 };

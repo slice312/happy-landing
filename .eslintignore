@@ -1,7 +1,5 @@
-/.git
-/.idea
-/.bundle
+.git/
+.idea/
 
-/node_modules
-/android
-/ios
+build/
+node_modules/
