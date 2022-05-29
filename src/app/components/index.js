@@ -1,8 +1,8 @@
-import "./sections/index.css";
-
-import {registerAdCountdownTimer} from "./ad-countdown-timer";
-import {registerThemeDemoBlock} from "./theme-demo";
-import {ModalOrder} from "./modal-order";
+import "./atoms/index.css";
+import "./organisms/sections/index.css";
+import {registerAdCountdownTimer} from "./organisms/ad-countdown-timer";
+import {registerThemeDemoBlock} from "./organisms/theme-demo";
+import {ModalOrder} from "./organisms/modal-order";
 
 
 export const registerControls = () => {
@@ -23,7 +23,7 @@ export const registerControls = () => {
     btnClose.onclick = () => {
         document.body.classList.remove("modal-open");
         modalOrder.classList.remove("modal-order_open");
-    }
+    };
 
     const btn3 = document.getElementById("pricing-btn-plan3");
     const modal = new ModalOrder();

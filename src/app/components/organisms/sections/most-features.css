@@ -24,7 +24,7 @@
 .most-feature-container__description {
     margin-top: 15px;
     text-align: left;
-    color: var(--text-color-gray);
+    color: var(--text-color-secondary);
 }
 
 .most-feature-container__image {

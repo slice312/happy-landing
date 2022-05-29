@@ -17,6 +17,7 @@
 
     --color-bg1: #FFFFFF;
     --color-bg2: #F2F2F2;
+    --color-bg3: #E5E5E5;
 
 
     --color-pricing-plan1: #0278ED;
@@ -38,7 +39,7 @@
 
     --text-color-primary: #222222;
     --text-color-white: #FFFFFF;
-    --text-color-gray: #666666;
+    --text-color-secondary: #666666;
 
 
     /* Controls */

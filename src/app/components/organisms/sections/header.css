@@ -33,7 +33,7 @@
 }
 
 .nav-header__item {
-    color: var(--text-color-gray);
+    color: var(--text-color-secondary);
     font-size: 15px;
     line-height: 24px;
 }

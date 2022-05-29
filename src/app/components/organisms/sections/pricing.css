@@ -3,6 +3,7 @@
     padding: 100px 0;
     display: flex;
     justify-content: center;
+    background-color: var(--color-bg3);
 }
 
 .pricing__container {
@@ -20,10 +21,6 @@
     padding: 0 16px;
 }
 
-.pricing__title {
-
-}
-
 .pricing__sub-title {
     margin-top: 5px;
 }
@@ -32,7 +29,7 @@
     margin-top: 14px;
     font-size: 18px;
     text-align: center;
-    color: var(--text-color-gray);
+    color: var(--text-color-secondary);
 }
 
 .pricing__plans-container {
