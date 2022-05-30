@@ -1,5 +1,6 @@
 import "./atoms/index.css";
 import "./molecules/radio-buttons.css";
+import "./molecules/check-boxes.css";
 import "./organisms/sections/index.css";
 import {registerAdCountdownTimer} from "./organisms/ad-countdown-timer";
 import {renderAppPreview} from "./organisms/app-preview";

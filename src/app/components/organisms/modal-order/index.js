@@ -43,6 +43,7 @@ export const renderModal = () => {
 
 
     const modalOrder = document.getElementById("modal-order");
+    // TODO: close
     const btnClose = document.getElementById("modal-order-close-btn");
     btnClose.onclick = () => {
         document.body.classList.remove("modal-open");

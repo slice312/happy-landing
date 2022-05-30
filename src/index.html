@@ -458,7 +458,9 @@
     <div class="modal-order__container">
         <form class="modal-order__form" id="modal-order-form">
             <div class="modal-order__title-wrap">
-                <h3 class="modal-order__title">Leave a request for the purchase of goods</h3>
+                <h3 class="modal-order__title">
+                    Leave a request for the purchase of goods
+                </h3>
             </div>
 
             <input class="input-default modal-order__input-name" type="text" placeholder="name">
@@ -505,28 +507,32 @@
             </fieldset>
 
             <fieldset class="check-boxes-about-us">
-                <legend class=check-boxes-about-us__title>How did you know F our app?</legend>
-                <label>
-                    <input class="check-boxes-about-us__item" type="checkbox" name="happy" value="facebook">
-                    Facebook
-                </label>
-                <label>
-                    <img src="assets/icons/check.svg" alt="">
-                    <input type="checkbox" class="check-boxes-about-us__item" id="instagram" name="happy"
-                           value="instagram">
-                    Instagram
-                </label>
-
-                <label>
-                    <input type="checkbox" class="check-boxes-about-us__item" id="youtube" name="happy"
-                           value="youtube">
-                    Youtube
-                </label>
-
-                <label>
-                    <input type="checkbox" class="check-boxes-about-us__item" id="other" name="happy" value="other">
-                    Other
-                </label>
+                <legend class=check-boxes-about-us__title>
+                    How did you know about our app?
+                </legend>
+                <div class="check-boxes-about-us__container">
+                    <label class="check-box">
+                        Facebook
+                        <input type="checkbox" name="happy" value="facebook">
+                        <span class="check-box__checkmark"></span>
+                    </label>
+                    <label class="check-box">
+                        Instagram
+                        <input type="checkbox" id="instagram" name="happy"
+                               value="instagram">
+                        <span class="check-box__checkmark"></span>
+                    </label>
+                    <label class="check-box">
+                        Youtube
+                        <input type="checkbox" id="youtube" name="happy"
+                               value="youtube">
+                        <span class="check-box__checkmark"></span>
+                    </label>
+                    <label class="check-box">
+                        Other
+                        <input type="checkbox" id="other" name="happy" value="other">
+                        <span class="check-box__checkmark"></span>
+                    </label></div>
             </fieldset>
 
             <button class="btn-default modal-order__submit-button" type="submit">

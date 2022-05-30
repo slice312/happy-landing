@@ -1,3 +1,4 @@
+/* TODO: почистить*/
 .modal-order {
     position: fixed;
     width: 100vw;
@@ -32,9 +33,6 @@
     width: 506px;
     height: 815px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 38px 90px 56px 86px;
 
     border-radius: 4px;
@@ -45,10 +43,11 @@
 .modal-order__form {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
 }
 
 .modal-order__title-wrap {
+    padding-left: 17px;
     width: 312px;
     height: 60px;
 }
@@ -69,14 +68,17 @@
 }
 
 .modal-order__submit-button {
+    margin-top: 40px;
+    margin-left: 6px;
     width: 172px;
     height: 40px;
     text-transform: uppercase;
+    align-self: center;
 }
 
 /* --------------- Radio Buttons --------------- */
 .plans-radio {
-    margin-top: 23px;
+    margin-top: 24px;
     height: 183px;
     gap: 11px;
 }
@@ -103,11 +105,15 @@
 
 /* --------------- Check Boxes --------------- */
 .check-boxes-about-us {
-    margin-top: 42px;
+    margin-top: 43px;
     height: 188px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
+}
+
+.check-boxes-about-us__container {
+    margin-top: 10px;
+    width: 127px;
 }
 
 .check-boxes-about-us__title {
@@ -118,16 +124,6 @@
     line-height: 24px;
 }
 
-.custom-checkbox {
-    position: absolute;
-    z-index: -1;
-    opacity: 0;
-}
-
-.check-boxes-about-us__item[type="checkbox"] {
-    display:none;
-}
-
 
 .modal-close {
     position: absolute;
@@ -135,9 +131,10 @@
     top: 15px;
     outline: none;
     appearance: none;
-    color: red;
+    color: var(--text-color-secondary);
     background: none;
     border: 0px;
     font-weight: bold;
     cursor: pointer;
 }
+
