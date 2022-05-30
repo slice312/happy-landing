@@ -343,10 +343,41 @@
         </div>
     </section>
 
+    <section class="testimonials">
+        <div class="limit-container testimonials__container">
+            <h2 class="common-title testimonials__title">Testimonials</h2>
+            <h3 class="common-sub-title testimonials__sub-title">Don't take our word for it.</h3>
+            <p class="common-description testimonials__description">See what our customers are saying.</p>
+            <div class="testimonials__users">
+                <div class="user-card">
+                    <p class="user-card__comment" id="user-card-comment1"></p>
+                    <div class="user-card__about">
+                        <p class="user-card__name" id="user-card-name1"></p>
+                        <p class="user-card__job" id="user-card-job1"></p>
+                    </div>
+                </div>
+                <div class="user-card">
+                    <p class="user-card__comment" id="user-card-comment2"></p>
+                    <div class="user-card__about">
+                        <p class="user-card__name" id="user-card-name2"></p>
+                        <p class="user-card__job" id="user-card-job2"></p>
+                    </div>
+                </div>
+                <div class="user-card">
+                    <p class="user-card__comment" id="user-card-comment3"></p>
+                    <div class="user-card__about">
+                        <p class="user-card__name" id="user-card-name3"></p>
+                        <p class="user-card__job" id="user-card-job3"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="download">
         <div class="limit-container download__container">
             <div class="download__info">
-                <h2 class="common-title">Download</h2>
+                <h2 class="common-title download__title">Download</h2>
                 <h3 class="common-sub-title download__sub-title">It's available right now!</h3>
                 <p class="common-description download__description">
                     Duis tristique sed lorem a vestibulum. Cras commodo consequat orci, in convallis
@@ -366,6 +397,7 @@
 <footer>
 </footer>
 
+
 <div class="modal-order modal-order_open1" id="modal-order">
     <div class="modal-order__bg"></div>
     <div class="modal-order__container">
@@ -373,13 +405,16 @@
             <div class="modal-order__title-wrap">
                 <h3 class="modal-order__title">Leave a request for the purchase of goods</h3>
             </div>
-            <input class="input-default" type="text" placeholder="name">
-            &nbsp;
+            <label>
+                <input class="input-default" type="text" placeholder="name">
+            </label>
 
-            <input class="input-default" type="text" placeholder="email">
+            <label>
+                <input class="input-default" type="text" placeholder="email">
+            </label>
 
             <fieldset class="plan-radio-buttons" form="modal-order-form" name="plans">
-                <legend>Your plan?</legend>
+                <legend class="plan-radio-buttons__title">Your plan?</legend>
                 <div class="plan-radio-buttons__item">
                     <input class="plan-radio-buttons__input" id="btn-plan-1" type="radio" name="plan" value="1">
                     <label class="plan-radio-buttons__label plan-radio-buttons__label_plan1 plan-radio-buttons__label_selected"
@@ -413,6 +448,28 @@
                         Plan 3
                     </label>
                 </div>
+            </fieldset>
+
+            <fieldset class="check-boxes-about-us">
+                <legend class=check-boxes-about-us__title>How did you know F our app?</legend>
+                <label>
+                    <input class="check-boxes-about-us__item" type="checkbox"  name="happy" value="facebook">
+                    Facebook
+                </label>
+                <label>
+                    <input type="checkbox" class="check-boxes-about-us__item" id="instagram" name="happy" value="instagram">
+                    Instagram
+                </label>
+
+                <label>
+                    <input type="checkbox" class="check-boxes-about-us__item" id="youtube" name="happy" value="youtube">
+                    Youtube
+                </label>
+
+                <label>
+                    <input type="checkbox" class="check-boxes-about-us__item" id="other" name="happy" value="other">
+                    Other
+                </label>
             </fieldset>
             <button class="btn-default" type="submit">
                 Send

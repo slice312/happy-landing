@@ -10,7 +10,7 @@
     --md1: calc(var(--max-width-container) + 12px);
     --md2: 992px;
     --md3: 768px;
-    --md4: 480px;
+    --md4: 480px; /*350*/
 
     /* Цвета */
     --color-background: "нету";

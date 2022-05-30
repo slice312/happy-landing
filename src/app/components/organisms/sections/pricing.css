@@ -3,10 +3,11 @@
     padding: 100px 0;
     display: flex;
     justify-content: center;
-    background-color: var(--color-bg3);
+    background-color: var(--color-bg1);
 }
 
 .pricing__container {
+    /* TODO: зачем*/
     max-width: 1200px;
     max-height: 502px;
 
