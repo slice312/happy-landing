@@ -2,8 +2,8 @@
     position: sticky;
     z-index: 1;
     top: 0;
-    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
     background-color: var(--color-bg1);
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
 }
 
 .nav-header {
@@ -37,7 +37,8 @@
 }
 
 .nav-header__item-btn {
-    padding: 10px 31px 12px 31px;
-    margin-left: 13px;
+    width: 171px;
+    height: 40px;
+    margin-left: 11px;
     text-transform: uppercase;
 }

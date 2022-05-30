@@ -11,11 +11,11 @@
 }
 
 .theme-demo {
-    max-height: 997px;
+    height: 997px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 100px 0 140px 0;
+    padding: 98px 0 140px 0;
     background-color: var(--color-theme-bg);
 }
 
@@ -25,14 +25,17 @@
 }
 
 .theme-demo__info {
-    padding: 0 11px;
+    padding-left: 6px;
+    padding-right: 15px;
 }
 
 .theme-demo__title {
+    margin-right: 1px;
     color: var(--color-theme-text-primary);
 }
 
 .theme-demo__sub-title {
+    margin-right: 6px;
     color: var(--color-theme-text-primary);
     margin-top: 5px;
 }
@@ -75,7 +78,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    padding-top: 18px;
+    gap: 18px;
 }
 
 .theme-demo__button {
@@ -88,6 +92,10 @@
     justify-content: space-between;
 
     background-color: transparent;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 2px;
     text-transform: uppercase;
 }
 

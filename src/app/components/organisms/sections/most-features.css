@@ -5,9 +5,11 @@
     justify-content: space-around;
     align-items: center;
     overflow: hidden;
+    padding: 0 140px 0 115px;
 }
 
 .most-feature-container__info {
+    margin-top: -14px;
     max-width: 420px;
     max-height: 290px;
 }
@@ -23,24 +25,25 @@
 
 .most-feature-container__description {
     margin-top: 15px;
+    width: 403px;
     text-align: left;
     color: var(--text-color-secondary);
 }
 
 .most-feature-container__image {
     position: relative;
-    top: 154px;
+    top: 150px;
     width: 376px;
     height: 745px;
 }
 
-
 .technology {
-    max-height: 652px;
+    max-height: 645px;
     background-color: var(--color-bg1);
 }
 
 .speed-and-security {
     max-height: 644px;
+    padding: 0 140px 0 175px;
     background-color: var(--color-bg2);
 }

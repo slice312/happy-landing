@@ -3,25 +3,28 @@
 }
 
 .app_preview__container {
-    max-height: 640px;
+    max-height: 637px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    padding: 0 137px 0 115px;
     align-items: center;
     overflow: hidden;
 }
 
 .app-preview-info {
     width: 420px;
-    height: 354px;
+    height: 370px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: 0 35px 13px 0;
 }
 
 .app-preview-info__logo {
     width: 192px;
     height: 64px;
+    margin-top: 2px;
 }
 
 .app-preview-info__title {
@@ -32,10 +35,12 @@
 }
 
 .app-preview-info__description {
-    margin-top: 17px;
+    margin-top: 19px;
+    text-align: left;
 }
 
 .app-preview-info__buttons {
+    margin-top: 10px;
     display: flex;
     flex-direction: row;
     padding: 0 0 10px 5px;
@@ -43,7 +48,9 @@
 }
 
 .app-preview-info__button {
-    padding: 10px 25px 12px 25px;
+    width: 148px;
+    height: 40px;
+    padding-left: 2px;
     text-transform: uppercase;
 }
 

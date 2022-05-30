@@ -1,5 +1,5 @@
 .statistic {
-    background-color: var(--color-red);
+    background-color: #FF5437;
 }
 
 .statistic__container {
@@ -8,7 +8,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 80px 199px 100px 199px;
+    padding: 80px 237px 100px 200px;
 }
 
 .statistic__item {
@@ -18,18 +18,18 @@
     font-size: 90px;
     font-weight: 400;
     line-height: 96px;
-    color: var(--text-color-white);
+    letter-spacing: 5px;
+    color: var(--text-color-primary2);
     text-align: center;
 }
 
 .statistic__title {
     margin-top: 20px;
-
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
     letter-spacing: 2px;
     text-transform: uppercase;
     text-align: center;
-    color: var(--text-color-white);
+    color: var(--text-color-primary2);
 }

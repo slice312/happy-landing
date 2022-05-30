@@ -22,6 +22,9 @@
     padding: 0 16px;
 }
 
+.pricing__title {
+}
+
 .pricing__sub-title {
     margin-top: 5px;
 }
@@ -66,6 +69,7 @@
 }
 
 .plan-card__price {
+    margin-top: -34px;
     font-size: 108px;
     font-weight: 400;
     line-height: 124px;

@@ -1,5 +1,6 @@
 .features {
-    padding: 132px 0 68px 0;
+    height: 1338px;
+    padding: 100px 0 99.88px 0;
     background-color: var(--color-primary);
 }
 
@@ -9,9 +10,14 @@
 
 .features__subtitle {
     color: var(--text-color-white);
+    width: 495px;
+    text-align: center;
+    align-self: center;
+    margin: 4px auto 0 auto;
 }
 
 .features__cards-container {
+    margin-top: -6px;
     padding: 50px;
     display: flex;
     justify-content: center;
@@ -22,8 +28,8 @@
 
 .feature-card {
     position: relative;
-    max-width: 379px;
-    max-height: 490px;
+    width: 379px;
+    height: 490px;
 
     display: flex;
     flex-direction: column;
@@ -92,13 +98,15 @@
     max-width: 100%;
     max-height: 197px;
     background-color: var(--color-bg2);
-    padding: 48px 46px 40px 46px;
+    padding: 48px 46px 40px 47px;
 }
 
 .feature-card__title {
+    /*margin-top: -3px;*/
     font-size: 24px;
     font-weight: 400;
     line-height: 30px;
+    letter-spacing: 0.2px;
     text-align: center;
 }
 
@@ -126,9 +134,8 @@
     color: var(--color-violet);
 }
 
-
 .feature-card__description-text {
-    margin-top: 11px;
+    margin-top: 10px;
     font-size: 15px;
     font-weight: 400;
     line-height: 22px;
