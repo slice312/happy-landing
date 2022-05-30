@@ -61,6 +61,7 @@
     font-size: 18px;
     font-weight: 400;
     line-height: 24px;
+    text-transform: capitalize;
     color: var(--color-pricing-plan1);
 }
 

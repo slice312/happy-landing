@@ -42,6 +42,14 @@ const padWithZero = (num, targetLength) => {
     return String(num).padStart(targetLength, "0");
 };
 
+/**
+ * @param {string} elemId - Id html элемента
+ * @param {string} text - текст
+ */
+const setTextToElement = (elemId, text) => {
+    document.getElementById(elemId).textContent = text;
+};
+
 
 export const Utils = {
     Date: {
@@ -50,5 +58,6 @@ export const Utils = {
     },
     String: {
         padWithZero
-    }
+    },
+    setTextToElement
 };

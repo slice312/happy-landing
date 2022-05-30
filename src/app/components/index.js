@@ -4,13 +4,14 @@ import {registerAdCountdownTimer} from "./organisms/ad-countdown-timer";
 import {registerThemeDemoBlock} from "./organisms/theme-demo";
 import {ModalOrder} from "./organisms/modal-order";
 import {renderTestimonials} from "./organisms/testimonials";
+import {renderPricing} from "./organisms/pricing";
 
 
 export const registerControls = () => {
     registerAdCountdownTimer();
     registerThemeDemoBlock();
     renderTestimonials();
-
+    renderPricing();
 
 
     const btn = document.getElementById("app-preview-btn-buy-now");

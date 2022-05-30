@@ -1,4 +1,18 @@
 {
+  "plans": [
+    {
+      "name": "standart",
+      "price": 9
+    },
+    {
+      "name": "premium",
+      "price": 99
+    },
+    {
+      "name": "lifetime",
+      "price": 149
+    }
+  ],
   "timerEndDate": "03.06.2022 23:59",
   "testimonials": [
     {
