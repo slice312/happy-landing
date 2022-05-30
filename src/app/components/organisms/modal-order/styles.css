@@ -27,104 +27,106 @@
 
 .modal-order__container {
     position: relative;
-
-    max-width: 506px;
-    max-height: 473px;
+    /*max-width: 506px;*/
+    /*max-height: 815px;*/
     width: 506px;
-    height: 473px;
+    height: 815px;
 
     display: flex;
     justify-content: center;
-    /*align-items: center;*/
+    align-items: center;
+    padding: 38px 90px 56px 86px;
 
     border-radius: 4px;
+    color: #000000;
     background-color: var(--color-bg1);
+}
 
-    /* TODO: убрать*/
-    color: red;
+.modal-order__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .modal-order__title-wrap {
     width: 312px;
     height: 60px;
-
-    display: flex;
-    align-items: center;
-    text-align: center;
 }
 
 .modal-order__title {
     font-size: 20px;
     font-weight: 400;
     line-height: 30px;
+    text-align: center;
 }
 
-.plan-radio-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+.modal-order__input-name {
+    margin-top: 42px;
 }
 
-.plan-radio-buttons__item {
-    position: relative;
-    display: flex;
-    flex-direction: row;
+.modal-order__input-email {
+    margin-top: 17px;
 }
 
-.plan-radio-buttons__input[type="radio"] {
-    display:none;
+.modal-order__submit-button {
+    width: 172px;
+    height: 40px;
+    text-transform: uppercase;
 }
 
-
-.plan-radio-buttons__label {
-    width: 100%;
-    height: 42px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-
-    border-radius: 4px;
-
-    --color-text: inherit;
-    --color-border: inherit;
-    --color-bg: #FAFAFA;
-
-    color: var(--color-text);
-    border: 1px solid var(--color-border);
-    background-color: var(--color-bg);
+/* --------------- Radio Buttons --------------- */
+.plans-radio {
+    margin-top: 23px;
+    height: 183px;
+    gap: 11px;
 }
 
-.plan-radio-buttons__icon {
-    position: absolute;
-    left: 13px;
-    fill: #FAFAFA;
+.plans-radio__title {
+    margin-bottom: 11px;
 }
 
-.plan-radio-buttons__label_plan1 {
-    --color-text:  #0278ED;
-    --color-border:  #0278ED;
+.plans-radio__label_plan1 {
+    --color-text: #0278ED;
+    --color-border: #0278ED;
 }
 
-.plan-radio-buttons__label_plan2 {
+.plans-radio__label_plan2 {
     --color-text: #FF5437;
     --color-border: #FF5437;
 }
 
-.plan-radio-buttons__label_plan3 {
+.plans-radio__label_plan3 {
     --color-text: #FF9209;
     --color-border: #FF9209;
 }
 
-.plan-radio-buttons__label_selected {
-    --color-bg: var(--color-border);
-    --color-text: #FAFAFA;
+
+/* --------------- Check Boxes --------------- */
+.check-boxes-about-us {
+    margin-top: 42px;
+    height: 188px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+.check-boxes-about-us__title {
+    margin-bottom: 11px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.custom-checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.check-boxes-about-us__item[type="checkbox"] {
+    display:none;
+}
 
 
 .modal-close {

@@ -1,40 +1,23 @@
 import "./atoms/index.css";
+import "./molecules/radio-buttons.css";
 import "./organisms/sections/index.css";
 import {registerAdCountdownTimer} from "./organisms/ad-countdown-timer";
+import {renderAppPreview} from "./organisms/app-preview";
 import {registerThemeDemoBlock} from "./organisms/theme-demo";
-import {ModalOrder} from "./organisms/modal-order";
+import {renderModal} from "./organisms/modal-order";
 import {renderTestimonials} from "./organisms/testimonials";
 import {renderPricing} from "./organisms/pricing";
 
 
 export const registerControls = () => {
     registerAdCountdownTimer();
+    renderAppPreview();
     registerThemeDemoBlock();
     renderTestimonials();
     renderPricing();
 
 
-    const btn = document.getElementById("app-preview-btn-buy-now");
-    const modalOrder = document.getElementById("modal-order");
-    btn.onclick = () => {
-        document.body.classList.add("modal-open");
-        modalOrder.classList.add("modal-order_open");
-    };
-
-    const btnClose = document.getElementById("modal-order-close-btn");
-    btnClose.onclick = () => {
-        document.body.classList.remove("modal-open");
-        modalOrder.classList.remove("modal-order_open");
-    };
-
-    const btn3 = document.getElementById("pricing-btn-plan3");
-    const modal = new ModalOrder();
-    modal.init();
-
-    btn3.onclick = () => {
-        modal.open(3);
-    };
-
+    renderModal();
 };
 
 /*
