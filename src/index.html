@@ -463,9 +463,15 @@
                 </h3>
             </div>
 
-            <input class="input-default modal-order__input-name" type="text" placeholder="name">
-            <input class="input-default modal-order__input-email" type="text" placeholder="email">
+            <div class="input-default modal-order__input-name">
+                <input id="modal-order-input-name"  type="text" placeholder="name">
+                <span class="input-default__err-msg" id="modal-order-input-name-err"></span>
+            </div>
 
+            <div class="input-default modal-order__input-email">
+                <input id="modal-order-input-email" type="text" placeholder="email">
+                <span class="input-default__err-msg" id="modal-order-input-email-err"></span>
+            </div>
             <fieldset class="radio-buttons plans-radio" form="modal-order-form" name="plans">
                 <legend class="radio-buttons__legend plans-radio__title">Your plan?</legend>
                 <div class="radio-buttons__item">
@@ -511,28 +517,28 @@
                     How did you know about our app?
                 </legend>
                 <div class="check-boxes-about-us__container">
-                    <label class="check-box">
+                    <label class="check-box check-boxes-about-us__item">
                         Facebook
-                        <input type="checkbox" name="happy" value="facebook">
+                        <input type="checkbox" name="srcInfo" value="facebook">
                         <span class="check-box__checkmark"></span>
                     </label>
-                    <label class="check-box">
+                    <label class="check-box check-boxes-about-us__item">
                         Instagram
-                        <input type="checkbox" id="instagram" name="happy"
-                               value="instagram">
+                        <input type="checkbox" id="instagram" name="srcInfo" value="instagram">
                         <span class="check-box__checkmark"></span>
                     </label>
-                    <label class="check-box">
+                    <label class="check-box check-boxes-about-us__item">
                         Youtube
-                        <input type="checkbox" id="youtube" name="happy"
-                               value="youtube">
+                        <input type="checkbox" id="youtube" name="srcInfo" value="youtube">
                         <span class="check-box__checkmark"></span>
                     </label>
-                    <label class="check-box">
+                    <label class="check-box check-boxes-about-us__item">
                         Other
-                        <input type="checkbox" id="other" name="happy" value="other">
+                        <input type="checkbox" id="other" name="srcInfo" value="other">
                         <span class="check-box__checkmark"></span>
-                    </label></div>
+                    </label>
+                </div>
+                <span class="check-boxes-about-us__err-msg" id="modal-order-checkbox-src"></span>
             </fieldset>
 
             <button class="btn-default modal-order__submit-button" type="submit">

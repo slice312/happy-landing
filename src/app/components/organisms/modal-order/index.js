@@ -1,85 +1,76 @@
 import {config} from "/src/config";
 import {Utils} from "/src/app/utils";
+import {Validator} from "./validator";
 import "./styles.css";
 
 
-export class ModalOrder {
-    #rootControl = document.getElementById("modal-order");
-
-    #form = document.getElementById("modal-order-form");
-
-    #planNum = 1;
-    constructor() {
-    }
-
-    init() {
-        this.#form.onsubmit = (e) => {
-            e.preventDefault(); // прервать перезагрузку страницы
-
-            const selectedPlan = Array.from(this.#form.elements.plan)
-                .find(x => x.checked)
-                ?.value;
-
-            console.log("selected plan", selectedPlan);
-            console.log("lol kek");
-        }
-    }
-
-    open(selectedPlan = 1) {
-        document.body.classList.add("modal-open");
-        this.#rootControl.classList.add("modal-order_open")
-
-        const radio =  Array.from(this.#form.elements.plan)
-            .find(x => x.value === String(selectedPlan));
-
-        if (radio)
-            radio.checked = true;
-    }
-}
-
-
-export const renderModal = () => {
+const renderModal = () => {
     renderPlanButtons();
+    setHandlerOnCloseButton();
+    setHandlerOnFormSubmit();
+};
 
+const renderPlanButtons = () => {
+    const plans = config.plans;
+    Utils.setTextToElement("plan-radio-button-label1", plans[0].name);
+    Utils.setTextToElement("plan-radio-button-label2", plans[1].name);
+    Utils.setTextToElement("plan-radio-button-label3", plans[2].name);
+};
 
+const setHandlerOnCloseButton = () => {
     const modalOrder = document.getElementById("modal-order");
-    // TODO: close
     const btnClose = document.getElementById("modal-order-close-btn");
     btnClose.onclick = () => {
         document.body.classList.remove("modal-open");
         modalOrder.classList.remove("modal-order_open");
+        resetState();
     };
+};
 
-    openModal();
+const setHandlerOnFormSubmit = () => {
+    const form = document.getElementById("modal-order-form");
+    form.onsubmit = (e) => {
+        e.preventDefault(); // прервать перезагрузку страницы
+        Validator.clearErrorsAll();
+        setTimeout(Validator.validateAll, 70);
+    };
 };
 
 
-export const openModal = (selectedPlan = 3) => {
+const openModal = (selectedPlan = 3) => {
     const modal = document.getElementById("modal-order");
-    modal.classList.add("modal-order_open")
+    modal.classList.add("modal-order_open");
     document.body.classList.add("modal-open");
 
+    setPlan(selectedPlan);
+};
+
+const setPlan = (selectedPlan) => {
     const form = document.getElementById("modal-order-form");
-    const radio =  Array.from(form.elements.plan)
+    const radio = Array.from(form.elements.plan)
         .find(x => x.value === String(selectedPlan));
 
     if (radio)
         radio.checked = true;
 };
 
-/*
-plan-radio-buttons__label_selected
- */
 
-const renderPlanButtons = () => {
-    const plans = config.plans;
+const closeModal = () => {
+    const modalOrder = document.getElementById("modal-order");
+    document.body.classList.remove("modal-open");
+    modalOrder.classList.remove("modal-order_open");
+    resetState();
+}
 
-    Utils.setTextToElement("plan-radio-button-label1", plans[0].name)
-    Utils.setTextToElement("plan-radio-button-label2", plans[1].name)
-    Utils.setTextToElement("plan-radio-button-label3", plans[2].name)
+const resetState = () => {
+    const form = document.getElementById("modal-order-form");
+    form.reset();
+    Validator.clearErrorsAll()
 };
 
 
-const setRadioButtons = () => {
-
-};
+export const ModalOrder = {
+    renderModal,
+    openModal,
+    closeModal
+}

@@ -31,7 +31,6 @@
     --color-blue: #5AB0FF;
     --color-light-blue: #00C6DF;
     --color-dark-blue: #0278ED;
-    --color-red: #FF5437;
     --color-orange: #FF9209;
     --color-pink: #E738CE;
     --color-violet: #B25DF8;
@@ -44,7 +43,9 @@
 
 
     /* Controls */
+    --color-error: #FF5437;
     --color-ui-focus-outline: #5AB0FF;
+
 }
 
 body {
