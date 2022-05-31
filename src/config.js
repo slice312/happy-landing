@@ -1,5 +1,5 @@
 import config from "/config.json" assert {type: "json"};
-import {Utils} from "./app/utils.js";
+import {Utils} from "./utils";
 
 
 config.timerEndDate = (config.timerEndDate)

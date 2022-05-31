@@ -1,5 +1,5 @@
 import {config} from "/src/config";
-import {Utils} from "/src/app/utils";
+import {Utils} from "/src/utils";
 import {Validator} from "./validation/validator";
 import "./styles.css";
 

@@ -1,5 +1,5 @@
 import {config} from "/src/config.js";
-import {Utils} from "/src/app/utils";
+import {Utils} from "/src/utils";
 import "./styles.css";
 
 

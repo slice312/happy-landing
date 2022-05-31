@@ -1,5 +1,5 @@
 import {config} from "/src/config.js";
-import {Utils} from "/src/app/utils.js";
+import {Utils} from "/src/utils";
 import "./styles.css";
 
 
@@ -64,7 +64,7 @@ export class CountdownTimer {
 }
 
 
-export const registerAdCountdownTimer = () => {
+export const renderAdCountdownTimer = () => {
     const timer = new CountdownTimer();
     timer.runTimer(config.timerEndDate);
 };

@@ -1,6 +1,6 @@
 import {config} from "/src/config.js";
-import {Utils} from "/src/app/utils";
-import {ModalOrder} from "/src/app/components/templates/modal-order";
+import {Utils} from "/src/utils";
+import {ModalOrder} from "/src/components/templates/modal-order";
 import "./styles.css";
 
 

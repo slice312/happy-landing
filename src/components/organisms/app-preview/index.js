@@ -1,4 +1,4 @@
-import {ModalOrder} from "/src/app/components/templates/modal-order";
+import {ModalOrder} from "/src/components/templates/modal-order";
 import "./styles.css";
 
 
