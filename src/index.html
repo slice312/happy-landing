@@ -388,8 +388,7 @@
                     Duis tristique sed lorem a vestibulum. Cras commodo consequat orci, in convallis
                     risus egestas non.
                 </p>
-                <!-- TODO: set href from js                -->
-                <a class="download__link" href="" target="_blank">
+                <a class="download__link" id="download-app-store-link" href="" target="_blank" rel="nofollow noopener">
                     <img src="assets/icons/app-store-download.svg" alt="app-store-download">
                 </a>
             </div>
@@ -464,12 +463,12 @@
             </div>
 
             <div class="input-default modal-order__input-name">
-                <input id="modal-order-input-name"  type="text" placeholder="name">
+                <input id="modal-order-input-name" name="name" type="text" placeholder="name">
                 <span class="input-default__err-msg" id="modal-order-input-name-err"></span>
             </div>
 
             <div class="input-default modal-order__input-email">
-                <input id="modal-order-input-email" type="text" placeholder="email">
+                <input id="modal-order-input-email" name="email" type="text" placeholder="email">
                 <span class="input-default__err-msg" id="modal-order-input-email-err"></span>
             </div>
             <fieldset class="radio-buttons plans-radio" form="modal-order-form" name="plans">
@@ -541,11 +540,15 @@
                 <span class="check-boxes-about-us__err-msg" id="modal-order-checkbox-src"></span>
             </fieldset>
 
-            <button class="btn-default modal-order__submit-button" type="submit">
+            <button class="btn-default modal-order__submit-button" id="modal-order-submit-button" type="submit">
                 Send
             </button>
         </form>
 
+        <div class="activity-indicator modal-order__activity-indicator" id="modal-order-activity-indicator">
+            <img class="activity-indicator__img" src="assets/icons/hourglass.svg" alt="hourglass">
+            <span class="activity-indicator__text">Loading...</span>
+        </div>
         <button class="modal-close modal-exit" id="modal-order-close-btn">X</button>
     </div>
 </div>

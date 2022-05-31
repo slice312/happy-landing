@@ -1,6 +1,6 @@
 import {config} from "/src/config";
 import {Utils} from "/src/app/utils";
-import {Validator} from "./validator";
+import {Validator} from "./validation/validator";
 import "./styles.css";
 
 
@@ -29,12 +29,48 @@ const setHandlerOnCloseButton = () => {
 
 const setHandlerOnFormSubmit = () => {
     const form = document.getElementById("modal-order-form");
+
     form.onsubmit = (e) => {
         e.preventDefault(); // прервать перезагрузку страницы
         Validator.clearErrorsAll();
-        setTimeout(Validator.validateAll, 70);
+
+        // таймаут для анимации мигания перед валидацией
+        setTimeout(() => {
+            const isValid = Validator.validateAll();
+            if (isValid) {
+                setActivityIndicator(true);
+                postFormData(form);
+            }
+        }, 70);
     };
 };
+
+
+const postFormData = (form) => {
+    const submitButton = document.getElementById("modal-order-submit-button");
+    submitButton.disabled = true;
+
+    const formData = {
+        name: form.elements.name.value,
+        email: form.elements.email.value,
+        plan: form.elements.plan.value,
+        infoSources: Array.from(form.elements.srcInfo)
+            .filter(x => x.checked)
+            .map(x => x.value)
+    };
+
+    setTimeout(() => {
+        console.log("Posted Form Data", formData);
+        submitButton.disabled = false;
+        closeModal();
+    }, 2000);
+};
+
+
+const setActivityIndicator = (isVisible) => {
+    const activityIndicator = document.getElementById("modal-order-activity-indicator");
+    activityIndicator.style.visibility = isVisible ? "visible" : "hidden";
+}
 
 
 const openModal = (selectedPlan = 3) => {
@@ -59,6 +95,7 @@ const closeModal = () => {
     const modalOrder = document.getElementById("modal-order");
     document.body.classList.remove("modal-open");
     modalOrder.classList.remove("modal-order_open");
+    setActivityIndicator(false);
     resetState();
 }
 

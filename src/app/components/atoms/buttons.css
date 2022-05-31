@@ -20,3 +20,8 @@
 .btn-default:focus {
     outline: 2px solid var(--color-ui-focus-outline);
 }
+
+.btn-default:disabled {
+    pointer-events: none;
+    background-color: gray;
+}

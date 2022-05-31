@@ -1,0 +1,35 @@
+.activity-indicator {
+    width: 125px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+
+.activity-indicator__img {
+    margin-right: 13px;
+    width: 24px;
+    height: 24px;
+    animation: 2s linear 0s normal none infinite running activity-indicator__rotate;
+    -webkit-animation: 2s linear 0s normal none infinite running activity-indicator__rotate;
+
+}
+
+@keyframes activity-indicator__rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.activity-indicator__text {
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #7E7E7E;
+}

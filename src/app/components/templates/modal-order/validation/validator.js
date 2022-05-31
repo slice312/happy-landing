@@ -114,6 +114,9 @@ class CheckBoxValidator {
 const validate = (validator) => {
     Object.keys(validator.fields)
         .forEach(field => validator.validate(field));
+
+    return Object.values(validator.fields)
+        .every(field => !field.errorText);
 };
 
 const clearErrors = (validator) => {
@@ -124,8 +127,9 @@ const clearErrors = (validator) => {
 
 export const Validator = {
     validateAll: () => {
-        validate(new InputValidator());
-        validate(new CheckBoxValidator());
+        let isValid = validate(new InputValidator())
+        isValid &= validate(new CheckBoxValidator());
+        return isValid;
 
     },
     clearErrorsAll: () => {
