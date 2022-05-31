@@ -3,3 +3,7 @@
 
 build/
 node_modules/
+
+
+# import assertion error
+src/config.js

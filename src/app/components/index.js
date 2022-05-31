@@ -5,7 +5,7 @@ import "./organisms/sections/index.css";
 import {registerAdCountdownTimer} from "./organisms/ad-countdown-timer";
 import {renderAppPreview} from "./organisms/app-preview";
 import {registerThemeDemoBlock} from "./organisms/theme-demo";
-import {renderModal} from "./organisms/modal-order";
+import {ModalOrder} from "./organisms/modal-order";
 import {renderTestimonials} from "./organisms/testimonials";
 import {renderPricing} from "./organisms/pricing";
 
@@ -18,7 +18,7 @@ export const registerControls = () => {
     renderPricing();
 
 
-    renderModal();
+    ModalOrder.renderModal();
 };
 
 /*

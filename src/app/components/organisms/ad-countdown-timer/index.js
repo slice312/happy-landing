@@ -66,5 +66,5 @@ export class CountdownTimer {
 
 export const registerAdCountdownTimer = () => {
     const timer = new CountdownTimer();
-    timer.runTimer(config.timerEndDate)
+    timer.runTimer(config.timerEndDate);
 };

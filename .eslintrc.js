@@ -2,7 +2,7 @@ module.exports = {
     parserOptions: {
         sourceType: "module",
         allowImportExportEverywhere: true,
-        ecmaVersion: 11
+        ecmaVersion: 13
     },
     rules: {
         semi: ["error", "always"],
