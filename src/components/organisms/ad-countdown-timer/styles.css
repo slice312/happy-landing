@@ -16,19 +16,22 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 0 20px;
 }
 
 .ad-countdown-timer__title {
-    margin-top: -18px;
-    color: var(--text-color-white);
+    margin: -18px 0 0 37px;
     font-size: 50px;
     font-weight: 700;
     line-height: 75px;
     letter-spacing: 1.1px;
     text-transform: uppercase;
+    text-align: center;
+    color: var(--text-color-white);
 }
 
 .ad-countdown-timer__sub-title {
+    margin-left: 37px;
     color: var(--text-color-white);
     font-size: 30px;
     font-weight: 700;
@@ -37,6 +40,7 @@
 }
 
 .ad-countdown-timer__digits {
+    margin: 0 0 0 22px;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -52,8 +56,7 @@
 }
 
 .ad-countdown-timer__digit-wrap {
-    width: 200.5px;
-    height: 174px;
+    width: 180.5px;
     text-align: center;
 }
 
@@ -63,4 +66,99 @@
     font-size: 24px;
     line-height: 36px;
     letter-spacing: 1.5px;
+}
+
+
+@media (max-width: 850px ) {
+    .ad-countdown-timer__title {
+        margin: 0;
+    }
+    .ad-countdown-timer__sub-title {
+        margin: 0;
+    }
+
+    .ad-countdown-timer__digits {
+        margin: 0;
+        padding: 0 20px 0 20px;
+        font-size: 80px;
+        line-height: 130px;
+    }
+
+    .ad-countdown-timer__digit-wrap {
+        width: 105px;
+    }
+
+    .ad-countdown-timer__digit-meaning-label {
+        /*margin: 0px 0 0 0;*/
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 18px;
+        letter-spacing: 1.5px;
+    }
+}
+
+
+@media (max-width: 600px ) {
+    .ad-countdown-timer__container {
+        padding: 0 0;
+    }
+    .ad-countdown-timer__title {
+        font-size: 45px;
+        line-height: 45px;
+    }
+
+    .ad-countdown-timer__sub-title {
+        font-size: 22px;
+        line-height: 27px;
+    }
+
+    .ad-countdown-timer__digits {
+        padding: 0 20px 0 20px;
+        font-size: 60px;
+        line-height: 120px;
+    }
+
+    .ad-countdown-timer__digit-wrap {
+        width: 75px;
+    }
+
+    .ad-countdown-timer__digit-meaning-label {
+        margin: 0px 0 0 0;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 18px;
+        letter-spacing: 1.5px;
+    }
+}
+
+
+@media (max-width: 380px) {
+    .ad-countdown-timer__title {
+        margin: 0 0 0 0;
+        font-size: 40px;
+        line-height: 40px;
+        letter-spacing: 1.1px;
+    }
+
+    .ad-countdown-timer__sub-title {
+        margin: 15px 0 0 0;
+        font-size: 18px;
+        line-height: 27px;
+    }
+
+    .ad-countdown-timer__digits {
+        margin: 57px 0 0 0;
+        padding: 0 36px 0 37px;
+        font-size: 40px;
+        line-height: 60px;
+    }
+
+    .ad-countdown-timer__digit-wrap {
+        width: 60px;
+    }
+
+    .ad-countdown-timer__digit-meaning-label {
+        font-size: 12px;
+        line-height: 18px;
+    }
 }

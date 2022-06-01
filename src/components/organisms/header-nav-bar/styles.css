@@ -18,6 +18,7 @@
 }
 
 .navbar__img {
+    margin-left: 51px;
     height: 40px;
     width: 120px;
 }
@@ -27,8 +28,8 @@
     justify-content: space-between;
     align-items: center;
     font-weight: 400;
-    padding: 12px 6px 12px 18px;
-    width: 611px;
+    padding: 12px 6px 12px 21px;
+    width: 660px;
 }
 
 .nav-bar__item {
@@ -56,6 +57,9 @@
 
 
 @media (max-width: 768px) {
+    .navbar__img {
+        margin: 0;
+    }
     .nav-bar__menu {
         position: fixed;
         top: 0;
