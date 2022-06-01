@@ -33,3 +33,45 @@
     text-align: center;
     color: var(--text-color-primary2);
 }
+
+
+
+@media (max-width: 1175px) {
+    .statistic__container {
+        padding: 80px 70px 100px 70px;
+    }
+}
+
+@media (max-width: 860px) {
+    .statistic__container {
+        padding: 50px 70px 40px 70px;
+    }
+
+    .statistic__value {
+        font-size: 60px;
+        line-height: 70px;
+        letter-spacing: 2px;
+    }
+
+    .statistic__title {
+        font-size: 10px;
+        line-height: 18px;
+        letter-spacing: 2px;
+    }
+}
+
+@media (max-width: 600px) {
+    .statistic__container {
+        max-height: none;
+        padding: 15px 70px 15px 70px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .statistic__value {
+    }
+
+    .statistic__title {
+        margin-top: 0;
+    }
+}
