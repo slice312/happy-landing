@@ -3,11 +3,11 @@
 }
 
 .app_preview__container {
-    max-height: 637px;
+    height: 637px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    padding: 0 137px 0 115px;
+    padding: 10px 108px 0 127px;
     align-items: center;
     overflow: hidden;
 }
@@ -55,7 +55,75 @@
 }
 
 .app-preview__image {
-    margin-top: 289px;
-    width: 376px;
-    height: 745px;
+    margin-top: 78px;
+    height: 548px;
+    max-width: 376px;
 }
+
+
+@media (max-width: 850px ) {
+    .app_preview__container {
+        max-height: none;
+        height: auto;
+        flex-direction: column;
+        padding: 20px 0px 0 0px;
+    }
+
+    .app-preview-info {
+        width: 70%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        padding: 0 0px 13px 0;
+    }
+
+    .app-preview-info__logo {
+        width: 165px;
+        height: 45px;
+        margin-top: 2px;
+    }
+
+    .app-preview-info__title {
+        margin-top: 5px;
+        color: var(--text-color-primary);
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 40px;
+    }
+
+    .app-preview-info__description {
+        margin-top: 5px;
+        text-align: left;
+    }
+
+    .app-preview-info__buttons {
+        margin-top: 15px;
+    }
+
+    .app-preview__image {
+        margin-top: 0;
+        max-height: 400px;
+        max-width: 376px;
+    }
+}
+
+
+@media (max-width: 400px ) {
+    .app-preview-info {
+        padding: 0px 10px 13px 0;
+    }
+
+    .app-preview-info__buttons {
+        margin-top: 15px;
+        flex-direction: column;
+    }
+
+    .app-preview-info__button {
+        width: 188px;
+        height: 40px;
+    }
+}
+

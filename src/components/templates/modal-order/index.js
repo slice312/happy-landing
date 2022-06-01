@@ -12,6 +12,7 @@ const renderModal = () => {
 
 const renderPlanButtons = () => {
     const plans = config.plans;
+    //TODO: set plans for value
     Utils.setTextToElement("plan-radio-button-label1", plans[0].name);
     Utils.setTextToElement("plan-radio-button-label2", plans[1].name);
     Utils.setTextToElement("plan-radio-button-label3", plans[2].name);
