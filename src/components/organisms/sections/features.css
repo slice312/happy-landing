@@ -74,7 +74,7 @@
 }
 
 .feature-card__icon_red {
-    background-color: var(--color-red);
+    background-color: #FF5437;
 }
 
 .feature-card__icon_orange {
@@ -115,7 +115,7 @@
 }
 
 .feature-card__title_red {
-    color: var(--color-red);
+    color: #FF5437;
 }
 
 .feature-card__title_orange {

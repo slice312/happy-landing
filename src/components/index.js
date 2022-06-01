@@ -1,6 +1,7 @@
 import "./atoms/index.css";
 import "./molecules/index.css";
 import "./organisms/sections/index.css";
+import {renderHeaderNavBar} from "./organisms/header-nav-bar";
 import {renderAdCountdownTimer} from "./organisms/ad-countdown-timer";
 import {renderAppPreview} from "./organisms/app-preview";
 import {renderThemeDemoBlock} from "./organisms/theme-demo";
@@ -11,6 +12,7 @@ import {ModalOrder} from "./templates/modal-order";
 
 
 export const renderComponents = () => {
+    renderHeaderNavBar();
     renderAdCountdownTimer();
     renderAppPreview();
     renderThemeDemoBlock();
