@@ -1,7 +1,7 @@
+import "./styles.css";
 import {config} from "/src/config";
 import {Utils} from "/src/utils";
 import {Validator} from "./validation/validator";
-import "./styles.css";
 
 
 const renderModal = () => {

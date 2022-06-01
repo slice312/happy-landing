@@ -10,7 +10,7 @@
     --md1: calc(var(--max-width-container) + 12px);
     --md2: 992px;
     --md3: 768px;
-    --md4: 480px; /*350*/
+    --md4: 320px;
 
     /* Цвета */
     --color-background: "нету";
@@ -28,12 +28,6 @@
     --color-white: #FFFFFF;
     --color-dark-beige: #F2F2F2;
     --color-dark-gray: #4E4E4E;
-    --color-blue: #5AB0FF;
-    --color-light-blue: #00C6DF;
-    --color-dark-blue: #0278ED;
-    --color-orange: #FF9209;
-    --color-pink: #E738CE;
-    --color-violet: #B25DF8;
 
 
     --text-color-primary: #222222;

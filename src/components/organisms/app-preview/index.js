@@ -1,5 +1,5 @@
-import {ModalOrder} from "/src/components/templates/modal-order";
 import "./styles.css";
+import {ModalOrder} from "/src/components/templates/modal-order";
 
 
 export const renderAppPreview = () => {

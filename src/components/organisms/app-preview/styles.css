@@ -61,12 +61,13 @@
 }
 
 
+
 @media (max-width: 850px ) {
     .app_preview__container {
         max-height: none;
         height: auto;
         flex-direction: column;
-        padding: 20px 0px 0 0px;
+        padding: 20px 0 0 0;
     }
 
     .app-preview-info {
@@ -97,6 +98,7 @@
     .app-preview-info__description {
         margin-top: 5px;
         text-align: left;
+        font-size: 15px;
     }
 
     .app-preview-info__buttons {
@@ -111,9 +113,19 @@
 }
 
 
-@media (max-width: 400px ) {
+@media (max-width: 420px ) {
     .app-preview-info {
-        padding: 0px 10px 13px 0;
+        width: 90%;
+        padding: 0 10px 13px 0;
+    }
+
+    .app-preview-info__title {
+        font-size: 28px;
+        line-height: 28px;
+    }
+
+    .app-preview-info__description {
+        font-size: 14px;
     }
 
     .app-preview-info__buttons {
@@ -124,6 +136,12 @@
     .app-preview-info__button {
         width: 188px;
         height: 40px;
+        font-size: 13px;
+    }
+
+    .app-preview__image {
+        margin-top: 0;
+        max-height: 300px;
+        max-width: 85%;
     }
 }
-
