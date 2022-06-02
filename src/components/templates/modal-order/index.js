@@ -16,6 +16,15 @@ const renderPlanButtons = () => {
     Utils.setTextToElement("plan-radio-button-label1", plans[0].name);
     Utils.setTextToElement("plan-radio-button-label2", plans[1].name);
     Utils.setTextToElement("plan-radio-button-label3", plans[2].name);
+
+    document.getElementById("btn-plan-1")
+        .setAttribute("value", plans[0].name);
+
+    document.getElementById("btn-plan-2")
+        .setAttribute("value", plans[1].name);
+
+    document.getElementById("btn-plan-3")
+        .setAttribute("value", plans[2].name);
 };
 
 const setHandlerOnCloseButton = () => {
@@ -74,7 +83,10 @@ const setActivityIndicator = (isVisible) => {
 }
 
 
-const openModal = (selectedPlan = 3) => {
+/**
+ * @param {number} [selectedPlan]
+ */
+const openModal = (selectedPlan) => {
     const modal = document.getElementById("modal-order");
     modal.classList.add("modal-order_open");
     document.body.classList.add("modal-open");
@@ -82,15 +94,35 @@ const openModal = (selectedPlan = 3) => {
     setPlan(selectedPlan);
 };
 
+/**
+ * @param {number} [selectedPlan]
+ */
 const setPlan = (selectedPlan) => {
+    if (!selectedPlan) {
+        setMostExpensiveTariff();
+    } else {
+        const form = document.getElementById("modal-order-form");
+        const plan = config.plans[selectedPlan - 1];
+        const radio = Array.from(form.elements.plan)
+            .find(x => x.value === plan.name);
+
+        if (radio)
+            radio.checked = true;
+    }
+};
+
+const setMostExpensiveTariff = () => {
     const form = document.getElementById("modal-order-form");
+    const sortedByPrice = config.plans
+        .slice()
+        .sort((x, y) => y.price - x.price);
+
     const radio = Array.from(form.elements.plan)
-        .find(x => x.value === String(selectedPlan));
+        .find(x => x.value === sortedByPrice[0].name);
 
     if (radio)
         radio.checked = true;
 };
-
 
 const closeModal = () => {
     const modalOrder = document.getElementById("modal-order");

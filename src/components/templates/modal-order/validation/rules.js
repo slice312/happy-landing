@@ -1,8 +1,8 @@
 export const Rule = Object.freeze({
     required: (value) => !value ? "this field is required*" : "",
 
-    moreThan: (num) => (value) => (value?.length <= num)
-        ? `should be more then ${num} symbols`
+    atLeast: (num) => (value) => (value?.length < num)
+        ? `should be at least ${num} symbols`
         : "",
 
     checkedAtLeastOnce: (boxes) =>

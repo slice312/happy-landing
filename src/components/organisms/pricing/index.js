@@ -1,7 +1,7 @@
+import "./styles.css";
 import {config} from "/src/config.js";
 import {Utils} from "/src/utils";
 import {ModalOrder} from "/src/components/templates/modal-order";
-import "./styles.css";
 
 
 export const renderPricing = () => {

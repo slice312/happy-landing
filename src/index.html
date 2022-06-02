@@ -8,38 +8,45 @@
 
 <header class="header-nav-bar">
     <div class="limit-container nav-bar">
-        <a> <img src="assets/icons/app-logo-happy.svg" alt="app-logo-happy" class="navbar__img"></a>
+        <a href="#"><img src="assets/icons/app-logo-happy.svg" alt="app-logo-happy" class="navbar__img"></a>
         <ul class="nav-bar__menu" id="header-nav-bar__menu">
             <li class="nav-bar__item">
-                <img class="nav-bar__item-logo" src="assets/icons/app-logo-happy.svg" alt="app-logo-happy">
+                <a href="#">
+                    <img class="nav-bar__item-logo" src="assets/icons/app-logo-happy.svg" alt="app-logo-happy">
+                </a>
             </li>
             <li class="nav-bar__item">
-                <!-- TODO: acnhors refs-->
                 <a href="#features" class="nav-bar__item">Features</a>
             </li>
             <li class="nav-bar__item">
-                <a href="#price" class="nav-bar__item">Pricing</a>
+                <a href="#pricing" class="nav-bar__item">Pricing</a>
             </li>
             <li class="nav-bar__item">
-                <a href="#technology" class="nav-bar__item">Testimonials</a>
+                <a href="#testimonials" class="nav-bar__item">Testimonials</a>
             </li>
             <li class="nav-bar__item">
                 <a href="#faq" class="nav-bar__item">FAQ</a>
             </li>
             <li class="nav-bar__item">
-                <!--  TODO: add click -->
-                <button class="btn-default nav-header__item-btn" type="button">
+                <button class="btn-default nav-header__item-btn" id="nav-btn-get-app" type="button">
                     Get this app
                 </button>
             </li>
         </ul>
-        <button class="burger-menu-btn" id="burger-menu-btn">
-            <svg class="burger-menu-btn-icon"
+        <button class="burger-menu-btn nav-bar__burger-button" id="burger-menu-btn">
+            <svg class="burger-menu-btn__icon"
                  width="24" height="24"
                  viewBox="0 0 24 24"
                  fill="currentColor"
                  xmlns="http://www.w3.org/2000/svg">
                 <path d="M3.75 4.5H20.25V6H3.75V4.5ZM3.75 11.25H20.25V12.75H3.75V11.25ZM3.75 18H20.25V19.5H3.75V18Z"/>
+            </svg>
+            <svg class="burger-menu-btn__close-icon"
+                 width="18" height="18"
+                 viewBox="0 0 18 18"
+                 fill="currentColor"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.67391 9.00001L0.836914 15.837L2.16291 17.163L8.99991 10.326L15.8369 17.163L17.1629 15.837L10.3259 9.00001L17.1629 2.16301L15.8369 0.837006L8.99991 7.67401L2.16291 0.837006L0.836914 2.16301L7.67391 9.00001Z"/>
             </svg>
         </button>
     </div>
@@ -102,7 +109,7 @@
         </div>
     </div>
 
-    <section class="features">
+    <section class="features" id="features">
         <div class="limit-container features__container">
             <h2 class="common-title features__title">Features</h2>
             <h3 class="common-sub-title features__subtitle">The latest & greatest in phone photography.</h3>
@@ -231,7 +238,7 @@
     </div>
 
     <section class="most-features">
-        <div class="technology">
+        <div class="technology" id="technology">
             <div class="limit-container most-feature-container">
                 <div class="most-feature-container__info">
                     <h2 class="common-title most-feature-container__title">Technology</h2>
@@ -319,7 +326,7 @@
         </div>
     </section>
 
-    <section class="pricing">
+    <section class="pricing" id="pricing">
         <div class="pricing__container">
             <div class="pricing__info">
                 <h2 class="common-title pricing__title">pricing</h2>
@@ -367,7 +374,7 @@
         </div>
     </section>
 
-    <section class="testimonials">
+    <section class="testimonials" id="testimonials">
         <div class="limit-container testimonials__container">
             <h2 class="common-title testimonials__title">Testimonials</h2>
             <h3 class="common-sub-title testimonials__sub-title">Don't take our word for it.</h3>
@@ -414,7 +421,7 @@
         </div>
     </section>
 
-    <div class="faq">
+    <div class="faq" id="faq">
         <div class="limit-container faq__container">
             <div class="faq__head">
                 <p class="faq__head-title">
@@ -456,120 +463,128 @@
 </main>
 
 
-<!--<footer>-->
-<!--    <div class="container block__footer">-->
-<!--        <img src="assets/icons/app-happy-logo-footer.svg" alt="app-happy-logo">-->
-<!--        <div class="footer__link">-->
-<!--            <a href="https://www.notion.so/Roadmap-1-0ed7573f0091461a863859c6011f4d28" target="_blank"><img-->
-<!--                    src="assets/icons/twitter.svg" alt="twitter" class="footer__link_icon"></a>-->
-<!--            <a href="https://www.notion.so/Roadmap-1-0ed7573f0091461a863859c6011f4d28" target="_blank"><img-->
-<!--                    src="assets/icons/instagram.svg" alt="instagram" class="footer__link_icon"></a>-->
-<!--            <a href="https://www.notion.so/Roadmap-1-0ed7573f0091461a863859c6011f4d28" target="_blank"><img-->
-<!--                    src="assets/icons/facebook.svg" alt="facebook" class="footer__link_icon"></a>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</footer>-->
+<footer>
+    <div class="container block__footer">
+        <img src="assets/icons/app-happy-logo-footer.svg" alt="app-happy-logo">
+        <div class="footer__link">
+            <a href="https://twitter.com/overlordzeon"
+               target="_blank" rel="nofollow noopener">
+                <img src="assets/icons/twitter.svg" alt="twitter" class="footer__link_icon">
+            </a>
+            <a href="https://www.instagram.com/zeon.ithub/?hl=ru"
+               target="_blank" rel="nofollow noopener">
+                <img src="assets/icons/instagram.svg" alt="instagram" class="footer__link_icon">
+            </a>
+            <a href="https://ru-ru.facebook.com/zeon"
+               target="_blank" rel="nofollow noopener">
+                <img src="assets/icons/facebook.svg" alt="facebook" class="footer__link_icon">
+            </a>
+        </div>
+    </div>
+</footer>
 
-<!--<div class="modal-order" id="modal-order">-->
-<!--    <div class="modal-order__bg"></div>-->
-<!--    <div class="modal-order__container">-->
-<!--        <form class="modal-order__form" id="modal-order-form">-->
-<!--            <div class="modal-order__title-wrap">-->
-<!--                <h3 class="modal-order__title">-->
-<!--                    Leave a request for the purchase of goods-->
-<!--                </h3>-->
-<!--            </div>-->
+<div class="modal-order" id="modal-order">
+    <div class="modal-order__bg"></div>
+    <div class="modal-order__container">
+        <form class="modal-order__form" id="modal-order-form">
+            <div class="modal-order__title-wrap">
+                <h3 class="modal-order__title">
+                    Leave a request for the purchase of goods
+                </h3>
+            </div>
 
-<!--            <div class="input-default modal-order__input-name">-->
-<!--                <input id="modal-order-input-name" name="name" type="text" placeholder="name">-->
-<!--                <span class="input-default__err-msg" id="modal-order-input-name-err"></span>-->
-<!--            </div>-->
+            <div class="input-default modal-order__input-name">
+                <input id="modal-order-input-name" name="name" type="text" placeholder="name">
+                <span class="input-default__err-msg" id="modal-order-input-name-err"></span>
+            </div>
 
-<!--            <div class="input-default modal-order__input-email">-->
-<!--                <input id="modal-order-input-email" name="email" type="text" placeholder="email">-->
-<!--                <span class="input-default__err-msg" id="modal-order-input-email-err"></span>-->
-<!--            </div>-->
-<!--            <fieldset class="radio-buttons plans-radio" form="modal-order-form" name="plans">-->
-<!--                <legend class="radio-buttons__legend plans-radio__title">Your plan?</legend>-->
-<!--                <div class="radio-buttons__item">-->
-<!--                    <input class="radio-buttons__input" id="btn-plan-1" type="radio" name="plan" value="1">-->
-<!--                    <label class="radio-buttons__label plans-radio__label_plan1"-->
-<!--                           id="plan-radio-button-label1"-->
-<!--                           for="btn-plan-1">-->
-<!--                        Plan 1-->
-<!--                    </label>-->
-<!--                    <svg class="radio-buttons__icon" width="20" height="16" viewBox="0 0 20 16"-->
-<!--                         fill="currentColor" xmlns="http://www.w3.org/2000/svg">-->
-<!--                        <path d="M6.81798 15.7789L0.453979 9.41495L3.28398 6.58495L6.81798 10.1289L16.716 0.220947L19.546 3.05095L6.81798 15.7789Z"/>-->
-<!--                    </svg>-->
-<!--                </div>-->
-<!--                <div class="radio-buttons__item">-->
-<!--                    <input class="radio-buttons__input" id="btn-plan-2" type="radio" name="plan" value="2">-->
-<!--                    <label class="radio-buttons__label plans-radio__label_plan2"-->
-<!--                           id="plan-radio-button-label2"-->
-<!--                           for="btn-plan-2">-->
-<!--                        Plan 2-->
-<!--                    </label>-->
-<!--                    <svg class="radio-buttons__icon" width="20" height="16" viewBox="0 0 20 16"-->
-<!--                         fill="currentColor" xmlns="http://www.w3.org/2000/svg">-->
-<!--                        <path d="M6.81798 15.7789L0.453979 9.41495L3.28398 6.58495L6.81798 10.1289L16.716 0.220947L19.546 3.05095L6.81798 15.7789Z"/>-->
-<!--                    </svg>-->
-<!--                </div>-->
-<!--                <div class="radio-buttons__item">-->
-<!--                    <input class="radio-buttons__input" id="btn-plan-3" type="radio" name="plan" value="3">-->
-<!--                    <label class="radio-buttons__label plans-radio__label_plan3 "-->
-<!--                           id="plan-radio-button-label3"-->
-<!--                           for="btn-plan-3">-->
-<!--                        Plan 3-->
-<!--                    </label>-->
-<!--                    <svg class="radio-buttons__icon" width="20" height="16" viewBox="0 0 20 16"-->
-<!--                         fill="currentColor" xmlns="http://www.w3.org/2000/svg">-->
-<!--                        <path d="M6.81798 15.7789L0.453979 9.41495L3.28398 6.58495L6.81798 10.1289L16.716 0.220947L19.546 3.05095L6.81798 15.7789Z"/>-->
-<!--                    </svg>-->
-<!--                </div>-->
-<!--            </fieldset>-->
+            <div class="input-default modal-order__input-email">
+                <input id="modal-order-input-email" name="email" type="text" placeholder="email">
+                <span class="input-default__err-msg" id="modal-order-input-email-err"></span>
+            </div>
+            <fieldset class="radio-buttons plans-radio" form="modal-order-form" name="plans">
+                <legend class="radio-buttons__legend plans-radio__title">Your plan?</legend>
+                <div class="radio-buttons__item">
+                    <input class="radio-buttons__input" id="btn-plan-1" type="radio" name="plan" value="">
+                    <label class="radio-buttons__label plans-radio__label_plan1"
+                           id="plan-radio-button-label1"
+                           for="btn-plan-1">
+                        Plan 1
+                    </label>
+                    <svg class="radio-buttons__icon" width="20" height="16" viewBox="0 0 20 16"
+                         fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.81798 15.7789L0.453979 9.41495L3.28398 6.58495L6.81798 10.1289L16.716 0.220947L19.546 3.05095L6.81798 15.7789Z"/>
+                    </svg>
+                </div>
+                <div class="radio-buttons__item">
+                    <input class="radio-buttons__input" id="btn-plan-2" type="radio" name="plan" value="">
+                    <label class="radio-buttons__label plans-radio__label_plan2"
+                           id="plan-radio-button-label2"
+                           for="btn-plan-2">
+                        Plan 2
+                    </label>
+                    <svg class="radio-buttons__icon" width="20" height="16" viewBox="0 0 20 16"
+                         fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.81798 15.7789L0.453979 9.41495L3.28398 6.58495L6.81798 10.1289L16.716 0.220947L19.546 3.05095L6.81798 15.7789Z"/>
+                    </svg>
+                </div>
+                <div class="radio-buttons__item">
+                    <input class="radio-buttons__input" id="btn-plan-3" type="radio" name="plan" value="">
+                    <label class="radio-buttons__label plans-radio__label_plan3 "
+                           id="plan-radio-button-label3"
+                           for="btn-plan-3">
+                        Plan 3
+                    </label>
+                    <svg class="radio-buttons__icon" width="20" height="16" viewBox="0 0 20 16"
+                         fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.81798 15.7789L0.453979 9.41495L3.28398 6.58495L6.81798 10.1289L16.716 0.220947L19.546 3.05095L6.81798 15.7789Z"/>
+                    </svg>
+                </div>
+            </fieldset>
 
-<!--            <fieldset class="check-boxes-about-us">-->
-<!--                <legend class=check-boxes-about-us__title>-->
-<!--                    How did you know about our app?-->
-<!--                </legend>-->
-<!--                <div class="check-boxes-about-us__container">-->
-<!--                    <label class="check-box check-boxes-about-us__item">-->
-<!--                        Facebook-->
-<!--                        <input type="checkbox" name="srcInfo" value="facebook">-->
-<!--                        <span class="check-box__checkmark"></span>-->
-<!--                    </label>-->
-<!--                    <label class="check-box check-boxes-about-us__item">-->
-<!--                        Instagram-->
-<!--                        <input type="checkbox" id="instagram" name="srcInfo" value="instagram">-->
-<!--                        <span class="check-box__checkmark"></span>-->
-<!--                    </label>-->
-<!--                    <label class="check-box check-boxes-about-us__item">-->
-<!--                        Youtube-->
-<!--                        <input type="checkbox" id="youtube" name="srcInfo" value="youtube">-->
-<!--                        <span class="check-box__checkmark"></span>-->
-<!--                    </label>-->
-<!--                    <label class="check-box check-boxes-about-us__item">-->
-<!--                        Other-->
-<!--                        <input type="checkbox" id="other" name="srcInfo" value="other">-->
-<!--                        <span class="check-box__checkmark"></span>-->
-<!--                    </label>-->
-<!--                </div>-->
-<!--                <span class="check-boxes-about-us__err-msg" id="modal-order-checkbox-src"></span>-->
-<!--            </fieldset>-->
+            <fieldset class="check-boxes-about-us">
+                <legend class=check-boxes-about-us__title>
+                    How did you know about our app?
+                </legend>
+                <div class="check-boxes-about-us__container">
+                    <label class="check-box check-boxes-about-us__item">
+                        Facebook
+                        <input type="checkbox" name="srcInfo" value="facebook">
+                        <span class="check-box__checkmark"></span>
+                    </label>
+                    <label class="check-box check-boxes-about-us__item">
+                        Instagram
+                        <input type="checkbox" id="instagram" name="srcInfo" value="instagram">
+                        <span class="check-box__checkmark"></span>
+                    </label>
+                    <label class="check-box check-boxes-about-us__item">
+                        Youtube
+                        <input type="checkbox" id="youtube" name="srcInfo" value="youtube">
+                        <span class="check-box__checkmark"></span>
+                    </label>
+                    <label class="check-box check-boxes-about-us__item">
+                        Other
+                        <input type="checkbox" id="other" name="srcInfo" value="other">
+                        <span class="check-box__checkmark"></span>
+                    </label>
+                </div>
+                <span class="check-boxes-about-us__err-msg" id="modal-order-checkbox-src"></span>
+            </fieldset>
 
-<!--            <button class="btn-default modal-order__submit-button" id="modal-order-submit-button" type="submit">-->
-<!--                Send-->
-<!--            </button>-->
-<!--        </form>-->
+            <button class="btn-default modal-order__submit-button" id="modal-order-submit-button" type="submit">
+                Send
+            </button>
+        </form>
 
-<!--        <div class="activity-indicator modal-order__activity-indicator" id="modal-order-activity-indicator">-->
-<!--            <img class="activity-indicator__img" src="assets/icons/hourglass.svg" alt="hourglass">-->
-<!--            <span class="activity-indicator__text">Loading...</span>-->
-<!--        </div>-->
-<!--        <button class="modal-close modal-exit" id="modal-order-close-btn">X</button>-->
-<!--    </div>-->
-<!--</div>-->
+        <div class="activity-indicator modal-order__activity-indicator" id="modal-order-activity-indicator">
+            <img class="activity-indicator__img" src="assets/icons/hourglass.svg" alt="hourglass">
+            <span class="activity-indicator__text">Loading...</span>
+        </div>
+        <button class="modal-close" id="modal-order-close-btn">
+            <img src="assets/icons/x-mark.svg" alt="x-mark">
+        </button>
+    </div>
+</div>
 
 </body>
 </html>

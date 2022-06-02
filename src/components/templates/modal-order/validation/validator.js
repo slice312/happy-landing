@@ -8,7 +8,7 @@ class InputValidator {
                 input: document.getElementById("modal-order-input-name"),
                 status: document.getElementById("modal-order-input-name-err")
             },
-            rules: [Rule.required, Rule.moreThan(2)],
+            rules: [Rule.required, Rule.atLeast(3)],
             errorText: ""
         },
         email: {
@@ -16,7 +16,7 @@ class InputValidator {
                 input: document.getElementById("modal-order-input-email"),
                 status: document.getElementById("modal-order-input-email-err")
             },
-            rules: [Rule.required, Rule.moreThan(2)],
+            rules: [Rule.required, Rule.atLeast(3)],
             errorText: ""
         }
     };

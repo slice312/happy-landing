@@ -51,11 +51,6 @@
     display: none;
 }
 
-.burger-menu-btn {
-    display: none;
-}
-
-
 
 @media (max-width: 768px) {
     .navbar__img {
@@ -75,12 +70,16 @@
         padding: 15px;
 
         transform: translateX(100%);
-        transition: transform 300ms;
+        transition: transform 400ms;
         background: var(--color-bg1);
     }
 
     .nav-bar__menu_active {
         transform: translateX(0);
+    }
+
+    .nav-bar__menu_active ~ .nav-bar__burger-button .burger-menu-btn__icon {
+        display: none;
     }
 
     .nav-bar__item-logo {

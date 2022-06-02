@@ -29,13 +29,10 @@
 
 .modal-order__container {
     position: relative;
-    /*max-width: 506px;*/
-    /*max-height: 815px;*/
     width: 506px;
     height: 815px;
 
     padding: 38px 90px 56px 86px;
-
 
     border-radius: 4px;
     color: #000000;
@@ -88,7 +85,6 @@
     top: 15px;
     outline: none;
     appearance: none;
-    color: var(--text-color-secondary);
     background: none;
     border: 0;
     font-weight: bold;
@@ -151,4 +147,11 @@
     font-size: 16px;
     font-weight: 400;
     color: var(--color-error);
+}
+
+
+@media (max-width: 500px) {
+    .modal-order__container {
+        padding: 38px 20px 56px 20px;
+    }
 }

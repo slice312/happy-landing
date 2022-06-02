@@ -1,5 +1,5 @@
-import {config} from "/src/config";
 import "./styles.css";
+import {config} from "/src/config";
 
 
 export const renderDownload = () => {

@@ -25,3 +25,21 @@
     pointer-events: none;
     background-color: gray;
 }
+
+
+
+.burger-menu-btn {
+    display: none;
+    background-color: transparent;
+}
+
+.burger-menu-btn__icon {
+    fill: var(--color-theme-text-primary);
+    background-color: var(--color-bg1)
+}
+
+.burger-menu-btn:hover svg {
+    background-color: var(--color-bg3);
+    border-radius: 50%;
+}
+
