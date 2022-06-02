@@ -127,7 +127,7 @@ const clearErrors = (validator) => {
 
 export const Validator = {
     validateAll: () => {
-        let isValid = validate(new InputValidator())
+        let isValid = validate(new InputValidator());
         isValid &= validate(new CheckBoxValidator());
         return isValid;
 

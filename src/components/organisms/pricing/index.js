@@ -26,3 +26,4 @@ export const renderPricing = () => {
     document.getElementById("pricing-btn-plan3")
         .onclick = () => ModalOrder.openModal(3);
 };
+

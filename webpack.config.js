@@ -8,10 +8,10 @@ const {CleanWebpackPlugin} = require("clean-webpack-plugin");
 
 
 module.exports = (env, argv) => {
-    return  (argv.mode === "production")
+    return (argv.mode === "production")
         ? prodConfig
         : devConfig;
-}
+};
 
 const prodConfig =  {
     mode: "production",

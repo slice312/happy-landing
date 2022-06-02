@@ -2,6 +2,7 @@ import "./styles.css";
 import {config} from "/src/config";
 import {Utils} from "/src/utils";
 import {Validator} from "./validation/validator";
+import {Api} from "/src/api";
 
 
 const renderModal = () => {
@@ -12,7 +13,7 @@ const renderModal = () => {
 
 const renderPlanButtons = () => {
     const plans = config.plans;
-    //TODO: set plans for value
+
     Utils.setTextToElement("plan-radio-button-label1", plans[0].name);
     Utils.setTextToElement("plan-radio-button-label2", plans[1].name);
     Utils.setTextToElement("plan-radio-button-label3", plans[2].name);
@@ -49,14 +50,14 @@ const setHandlerOnFormSubmit = () => {
             const isValid = Validator.validateAll();
             if (isValid) {
                 setActivityIndicator(true);
-                postFormData(form);
+                void postFormData(form);
             }
         }, 70);
     };
 };
 
 
-const postFormData = (form) => {
+const postFormData = async (form) => {
     const submitButton = document.getElementById("modal-order-submit-button");
     submitButton.disabled = true;
 
@@ -69,18 +70,17 @@ const postFormData = (form) => {
             .map(x => x.value)
     };
 
-    setTimeout(() => {
-        console.log("Posted Form Data", formData);
-        submitButton.disabled = false;
-        closeModal();
-    }, 2000);
+    const response = await Api.sendPurchaseGoods(formData);
+    console.log("Posted Form Data", response, formData);
+    submitButton.disabled = false;
+    closeModal();
 };
 
 
 const setActivityIndicator = (isVisible) => {
     const activityIndicator = document.getElementById("modal-order-activity-indicator");
     activityIndicator.style.visibility = isVisible ? "visible" : "hidden";
-}
+};
 
 
 /**
@@ -130,12 +130,12 @@ const closeModal = () => {
     modalOrder.classList.remove("modal-order_open");
     setActivityIndicator(false);
     resetState();
-}
+};
 
 const resetState = () => {
     const form = document.getElementById("modal-order-form");
     form.reset();
-    Validator.clearErrorsAll()
+    Validator.clearErrorsAll();
 };
 
 
@@ -143,4 +143,4 @@ export const ModalOrder = {
     renderModal,
     openModal,
     closeModal
-}
+};

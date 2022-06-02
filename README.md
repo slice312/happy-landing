@@ -10,3 +10,9 @@ By default, starting on `http://localhost:3000`
 ```sh
 npm run start-prod  
 ```
+
+
+
+
+## About
++ Page adapted to the minimum screen width 355 pixels
