@@ -6,12 +6,31 @@ import {Api} from "/src/api";
 
 
 const renderModal = () => {
-    renderPlanButtons();
-    setHandlerOnCloseButton();
-    setHandlerOnFormSubmit();
+    setOutSideClickHandler();
+    setCloseButtonHandler();
+    renderPlanRadioButtons();
+    setFormSubmitHandler();
 };
 
-const renderPlanButtons = () => {
+
+const setOutSideClickHandler = () => {
+    const modal = document.getElementById("modal-order");
+    document.addEventListener("click", (e) => {
+        if (modal.classList.contains("modal-order_open")) {
+            if (e.target.matches("modal-order-container")
+                || !e.target.closest("#modal-order-container")) {
+                closeModal();
+            }
+        }
+    }, true);
+};
+
+const setCloseButtonHandler = () => {
+    const btnClose = document.getElementById("modal-order-close-btn");
+    btnClose.onclick = closeModal;
+};
+
+const renderPlanRadioButtons = () => {
     const plans = config.plans;
 
     Utils.setTextToElement("plan-radio-button-label1", plans[0].name);
@@ -28,17 +47,8 @@ const renderPlanButtons = () => {
         .setAttribute("value", plans[2].name);
 };
 
-const setHandlerOnCloseButton = () => {
-    const modalOrder = document.getElementById("modal-order");
-    const btnClose = document.getElementById("modal-order-close-btn");
-    btnClose.onclick = () => {
-        document.body.classList.remove("modal-open");
-        modalOrder.classList.remove("modal-order_open");
-        resetState();
-    };
-};
 
-const setHandlerOnFormSubmit = () => {
+const setFormSubmitHandler = () => {
     const form = document.getElementById("modal-order-form");
 
     form.onsubmit = (e) => {
@@ -56,6 +66,10 @@ const setHandlerOnFormSubmit = () => {
     };
 };
 
+const setActivityIndicator = (isVisible) => {
+    const activityIndicator = document.getElementById("modal-order-activity-indicator");
+    activityIndicator.style.visibility = isVisible ? "visible" : "hidden";
+};
 
 const postFormData = async (form) => {
     const submitButton = document.getElementById("modal-order-submit-button");
@@ -77,12 +91,6 @@ const postFormData = async (form) => {
 };
 
 
-const setActivityIndicator = (isVisible) => {
-    const activityIndicator = document.getElementById("modal-order-activity-indicator");
-    activityIndicator.style.visibility = isVisible ? "visible" : "hidden";
-};
-
-
 /**
  * @param {number} [selectedPlan]
  */
@@ -99,7 +107,7 @@ const openModal = (selectedPlan) => {
  */
 const setPlan = (selectedPlan) => {
     if (!selectedPlan) {
-        setMostExpensiveTariff();
+        setMostExpensivePlan();
     } else {
         const form = document.getElementById("modal-order-form");
         const plan = config.plans[selectedPlan - 1];
@@ -111,10 +119,9 @@ const setPlan = (selectedPlan) => {
     }
 };
 
-const setMostExpensiveTariff = () => {
+const setMostExpensivePlan = () => {
     const form = document.getElementById("modal-order-form");
-    const sortedByPrice = config.plans
-        .slice()
+    const sortedByPrice = config.plans.slice()
         .sort((x, y) => y.price - x.price);
 
     const radio = Array.from(form.elements.plan)
@@ -123,6 +130,7 @@ const setMostExpensiveTariff = () => {
     if (radio)
         radio.checked = true;
 };
+
 
 const closeModal = () => {
     const modalOrder = document.getElementById("modal-order");

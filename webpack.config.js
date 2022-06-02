@@ -66,7 +66,7 @@ const devConfig = {
         path: path.resolve(__dirname, "./build")
     },
     devServer: {
-        port: 5000,
+        port: 5007,
         static : "./build",
         hot: true
     },

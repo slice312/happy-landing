@@ -49,6 +49,7 @@
     padding-left: 17px;
     width: 312px;
     height: 60px;
+    align-self: center;
 }
 
 .modal-order__title {
@@ -152,6 +153,6 @@
 
 @media (max-width: 500px) {
     .modal-order__container {
-        padding: 38px 20px 56px 20px;
+        padding: 38px 40px 56px 40px;
     }
 }

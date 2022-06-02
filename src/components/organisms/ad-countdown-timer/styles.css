@@ -2,6 +2,7 @@
     visibility: hidden;
     background-image: url("/src/assets/images/ad-countdown-timer-background.png");
     background-position: center;
+    background-size: cover;
     width: 100%;
     height: 436px;
     display: flex;
