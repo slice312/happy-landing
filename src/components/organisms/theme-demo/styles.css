@@ -16,6 +16,7 @@
     justify-content: center;
     align-items: center;
     padding: 98px 0 140px 0;
+    transition: background-color 300ms linear;
     background-color: var(--color-theme-bg);
 }
 
@@ -130,4 +131,58 @@
 
 .theme-demo_dark-theme .theme_demo__btn-dark-text {
     color: var(--color-theme-accent);
+}
+
+
+
+@media (max-width: 750px) {
+    .theme-demo {
+        height: auto;
+        padding: 50px 25px;
+    }
+
+    .theme-demo__image {
+        max-width: 320px;
+        max-height: 340px;
+    }
+
+    .theme-demo__info {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .theme-demo {
+        height: auto;
+        padding: 40px 25px 10px 25px;
+    }
+
+    .theme-demo__sub-title {
+        font-size: 24px;
+        line-height: 27px;
+    }
+
+    .theme-demo__description {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 20px;
+    }
+
+    .theme-demo__image {
+        max-height: 300px;
+        max-width: 85%;
+    }
+
+    .theme-demo__buttons {
+        height: 80px;
+        padding-top: 10px;
+        gap: 18px;
+    }
+
+    .theme-demo__button {
+        font-size: 12px;
+        line-height: 20px;
+    }
 }
