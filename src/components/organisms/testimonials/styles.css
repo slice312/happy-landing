@@ -1,5 +1,4 @@
 .testimonials {
-    max-height: 554px;
     padding: 100px 120px 100px 120px;
     background-color: var(--color-bg2);
 }
@@ -26,6 +25,7 @@
     margin-top: 39.94px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 16px;
 }
 
@@ -64,24 +64,65 @@
 
 
 
-/*@media (max-width: 786px) {*/
-/*    .testimonials__users {*/
-/*        justify-content: center;*/
-/*    }*/
+@media (max-width: 786px) {
+    .testimonials {
+        padding: 50px;
+    }
+    .testimonials__sub-title {
+        font-size: 25px;
+    }
 
-/*    .testimonials {*/
-/*        padding: 100px 10px;*/
-/*    }*/
-/*}*/
+    .testimonials__users {
+        margin-top: 10px;
+    }
+}
 
-/*@media (max-width: 350px) {*/
-/*    .user-card     {*/
-/*        width: 100%;*/
-/*        height: auto;*/
-/*        padding: 0;*/
-/*    }*/
 
-/*    .user-card__comment {*/
-/*        margin-bottom: 10px;*/
-/*    }*/
-/*}*/
+@media (max-width: 500px) {
+    .testimonials {
+        padding: 50px;
+    }
+
+    .testimonials__sub-title {
+        font-size: 25px;
+    }
+}
+
+
+
+@media (max-width: 390px) {
+    .testimonials {
+        padding: 30px;
+    }
+
+    .testimonials__sub-title {
+        font-size: 18px;
+    }
+
+    .testimonials__description {
+        font-size: 13px;
+    }
+
+    .user-card {
+        width: 309px;
+        height: 200px;
+    }
+
+    .user-card__comment {
+        font-size: 13px;
+        line-height: 24px;
+    }
+
+    .user-card__name {
+        font-size: 13px;
+        line-height: 15px;
+        color: #1B1A1A;
+    }
+
+    .user-card__job {
+        margin-top: 5px;
+        font-size: 10px;
+        line-height: 15px;
+        color: #1B1A1A;
+    }
+}
