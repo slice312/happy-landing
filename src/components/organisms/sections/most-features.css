@@ -4,13 +4,14 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    padding: 0 140px 0 115px;
+    padding: 0 120px 0 135px;
 }
 
 .most-feature-container__info {
     margin-top: -14px;
     max-width: 420px;
     max-height: 290px;
+    padding-top: 5px;
 }
 
 .most-feature-container__title {
@@ -30,7 +31,7 @@
 }
 
 .most-feature-container__image {
-    margin-top: 78px;
+    margin-top: 97px;
     max-height: 548px;
     max-width: 100%;
 }
@@ -44,6 +45,11 @@
     max-height: 644px;
     background-color: var(--color-bg2);
 }
+
+.speed-and-security__container {
+    padding: 0 101px 0 166px;
+}
+
 
 
 @media (max-width: 1060px) {

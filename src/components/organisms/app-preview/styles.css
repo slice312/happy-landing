@@ -13,12 +13,12 @@
 }
 
 .app-preview-info {
-    width: 420px;
+    width: 410px;
     height: 370px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 0 35px 13px 0;
+    padding: 0 15px 16px 3px;
 }
 
 .app-preview-info__logo {
@@ -48,14 +48,15 @@
 }
 
 .app-preview-info__button {
-    width: 148px;
+    width: 147px;
     height: 40px;
     padding-left: 2px;
     text-transform: uppercase;
 }
 
 .app-preview__image {
-    margin-top: 78px;
+    margin-top: 80px;
+    margin-right: 5px;
     height: 548px;
     max-width: 376px;
 }

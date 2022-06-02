@@ -1,5 +1,5 @@
 .features {
-    height: 1338px;
+    height: 1339px;
     padding: 100px 0 99.88px 0;
     background-color: #222222;
 }
@@ -12,19 +12,19 @@
 }
 
 .features__title {
-    margin-left: 35px;
+    margin-left: 40px;
     color: var(--text-color-primary2);
 }
 
 .features__subtitle {
     color: var(--text-color-primary2);
     width: 495px;
-    margin: 5px 0 0 29px;
+    margin: 5px 0 0 38px;
 }
 
 .features__cards-container {
     margin-top: -6px;
-    padding: 50px 0 50px 30px;
+    padding: 50px 0 50px 39px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,7 +34,7 @@
 
 .feature-card {
     position: relative;
-    width: 379px;
+    width: 380px;
     height: 490px;
 
     display: flex;
@@ -143,7 +143,7 @@
     margin-top: 10px;
     font-size: 15px;
     font-weight: 400;
-    line-height: 22px;
+    line-height: 24px;
     text-align: center;
     color: var(--text-color-primary);
 }
