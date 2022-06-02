@@ -34,3 +34,19 @@
     width: 180px;
     height: 60px;
 }
+
+
+@media (max-width: 500px) {
+    .download {
+        max-height: none;
+        padding: 50px 25px;
+    }
+
+    .download__sub-title {
+        font-size: 23px;
+    }
+
+    .download__description {
+        font-size: 15px;
+    }
+}

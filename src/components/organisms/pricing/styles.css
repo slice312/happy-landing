@@ -9,7 +9,6 @@
 .pricing__container {
     max-width: 1200px;
     max-height: 502px;
-
     display: flex;
     align-items: center;
     flex-direction: column;

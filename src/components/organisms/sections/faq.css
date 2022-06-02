@@ -1,9 +1,11 @@
 .faq {
     background: var(--color-bg3);
+    width: 100%;
+    padding: 105px 25px 110px 25px;
 }
 
 .faq__container {
-    padding: 105px 120px 110px 120px;
+    max-width: 1200px;
 }
 
 .faq__head {
@@ -26,15 +28,14 @@
 .faq__questions {
     display: flex;
     flex-wrap: wrap;
+    gap: 16px 16px;
 }
 
 .questions__card {
     height: auto;
-    max-width: 576px;
+    width: calc(50% - 8px);
     color: #222222;
     font-weight: 400;
-    margin-right: 16px;
-    margin-bottom: 50px;
 }
 
 .questions__card-title {
@@ -46,4 +47,40 @@
 .questions__card-description {
     font-size: 16px;
     line-height: 24px;
+}
+
+
+@media (max-width: 800px) {
+    .faq__questions {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 25px;
+    }
+
+    .questions__card {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 400px) {
+    .faq__head-title {
+        font-size: 25px;
+        line-height: 36px;
+    }
+
+    .faq__head-description {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .questions__card-title {
+        font-size: 15px;
+        line-height: 28px;
+    }
+
+    .questions__card-description {
+        font-size: 13px;
+        line-height: 18px;
+    }
 }
