@@ -125,8 +125,9 @@
     }
 
     .user-card {
-        width: 309px;
+        width: 280px;
         height: 200px;
+        padding: 30px;
     }
 
     .user-card__comment {

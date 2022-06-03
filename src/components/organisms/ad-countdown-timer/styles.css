@@ -163,3 +163,12 @@
         line-height: 18px;
     }
 }
+
+@media (max-width: 356px) {
+
+    .ad-countdown-timer__digits {
+        padding: 0 5px 0 5px;
+        /*font-size: 40px;*/
+        /*line-height: 60px;*/
+    }
+}

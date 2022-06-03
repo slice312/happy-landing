@@ -68,6 +68,7 @@ const devConfig = {
     devServer: {
         port: 5007,
         static : "./build",
+        watchFiles: ["./src/index.html"],
         hot: true
     },
     plugins: [

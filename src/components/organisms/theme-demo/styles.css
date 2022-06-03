@@ -180,6 +180,7 @@
     }
 
     .theme-demo__buttons {
+        margin:0;
         height: 80px;
         padding-top: 10px;
         gap: 18px;

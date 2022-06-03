@@ -10,7 +10,6 @@
 
 .footer__logo {
     margin-left: 38px;
-
 }
 
 .footer__link {
@@ -21,7 +20,23 @@
     justify-content: space-between;
 }
 
-.footer__link_icon {
-    height: 24px;
-    width: 24px;
+
+
+@media (max-width: 900px) {
+    .footer__logo,
+    .footer__link{
+        margin-left: 0;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .footer {
+        padding: 50px 0;
+    }
+
+    .footer__logo {
+        width: 80px;
+        height: 80px;
+    }
 }

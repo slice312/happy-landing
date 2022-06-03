@@ -144,6 +144,14 @@
         padding: 50px 0;
     }
 
+    .pricing__info {
+        padding-left: 0;
+    }
+
+    .pricing__title {
+        margin-left: 0;
+    }
+
     .plan-card {
         width: 250px;
         height: 250px;
@@ -192,7 +200,6 @@
 
 
 @media (max-width: 650px) {
-
     .pricing__plans-container {
         flex-direction: column;
         flex-wrap: nowrap;

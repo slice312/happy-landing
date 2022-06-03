@@ -41,12 +41,17 @@
     height: 60px;
 }
 
+
 @media (max-width: 900px) {
     .download__title,
     .download__sub-title,
     .download__description,
     .download__link{
         margin-left: 0;
+    }
+
+    .download__info {
+        max-height: none;
     }
 }
 
@@ -58,10 +63,15 @@
     }
 
     .download__sub-title {
-        font-size: 23px;
+        font-size: 18px;
     }
 
     .download__description {
         font-size: 15px;
+    }
+
+    .download__link img {
+        width: 150px;
+        height: 55px;
     }
 }
