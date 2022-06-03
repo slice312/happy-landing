@@ -1,5 +1,5 @@
 .testimonials {
-    padding: 100px 120px 100px 120px;
+    padding: 100px 0;
     background-color: var(--color-bg2);
 }
 
@@ -10,12 +10,19 @@
     align-items: center;
 }
 
+.testimonials__title {
+    margin-left: 41px;
+    margin-top: 1px;
+}
+
 .testimonials__sub-title {
     margin-top: -4px;
+    margin-left: 39px;
 }
 
 .testimonials__description {
-    margin-top: 14px;
+    margin-top: 13px;
+    margin-left: 37px;
     font-size: 18px;
     text-align: center;
     color: var(--text-color-secondary);
@@ -27,6 +34,8 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 16px;
+    padding-left: 48px;
+    padding-right: 10px;
 }
 
 .user-card {
@@ -37,7 +46,7 @@
     flex-direction: column;
     justify-content: space-between;
     text-align: left;
-    padding: 30px 37px 30px 27px;
+    padding: 31px 55px 34px 30px;
 
     background-color: var(--color-bg1);
     border-radius: 20px;
@@ -56,7 +65,6 @@
 }
 
 .user-card__job {
-    margin-top: 5px;
     font-size: 14px;
     line-height: 20px;
     color: #1B1A1A;
@@ -68,12 +76,25 @@
     .testimonials {
         padding: 50px;
     }
+
+    .testimonials__title {
+        margin: 0;
+    }
+
     .testimonials__sub-title {
+        margin: 0;
         font-size: 25px;
+    }
+
+    .testimonials__description {
+        margin-left: 0;
     }
 
     .testimonials__users {
         margin-top: 10px;
+    }
+    .testimonials__users {
+        padding: 0;
     }
 }
 

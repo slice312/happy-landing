@@ -1,7 +1,7 @@
 .faq {
     background: var(--color-bg3);
     width: 100%;
-    padding: 105px 25px 110px 25px;
+    padding: 110px 15px;
 }
 
 .faq__container {
@@ -15,12 +15,14 @@
 }
 
 .faq__head-title {
+    margin-left: 35px;
+    margin-bottom: 14px;
     font-size: 32px;
     line-height: 36px;
-    margin-bottom: 14px;
 }
 
 .faq__head-description {
+    margin-left: 35px;
     font-size: 15px;
     line-height: 20px;
 }
@@ -28,7 +30,8 @@
 .faq__questions {
     display: flex;
     flex-wrap: wrap;
-    gap: 16px 16px;
+    gap: 27px 16px;
+    padding-left: 35px;
 }
 
 .questions__card {
@@ -51,10 +54,21 @@
 
 
 @media (max-width: 800px) {
+    .faq {
+        padding: 50px 25px;
+    }
+
+    .faq__head-title,
+    .faq__head-description {
+        margin-left: 0;
+    }
+
     .faq__questions {
         flex-direction: column;
         flex-wrap: nowrap;
         gap: 25px;
+        padding-left: 0;
+
     }
 
     .questions__card {
@@ -64,6 +78,10 @@
 
 
 @media (max-width: 400px) {
+    .faq {
+        padding: 25px 15px;
+    }
+
     .faq__head-title {
         font-size: 25px;
         line-height: 36px;
