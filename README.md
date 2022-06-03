@@ -1,6 +1,6 @@
 
 # About
-+ Page adapted to the minimum screen width 355 pixels
++ Page adapted to the minimum screen width 320 pixels
 + The project uses ES6 modules, so you can't just open the `index.html` file through the file system, you need to get the page from the local server.
 
 
