@@ -28,12 +28,12 @@
     letter-spacing: 1.1px;
     text-transform: uppercase;
     text-align: center;
-    color: var(--text-color-white);
+    color: var(--text-color-primary2);
 }
 
 .ad-countdown-timer__sub-title {
     margin-left: 37px;
-    color: var(--text-color-white);
+    color: var(--text-color-primary2);
     font-size: 30px;
     font-weight: 700;
     line-height: 45px;

@@ -6,15 +6,7 @@
 
     --max-width-container: 1440px;
 
-    /* Брекпоинты */
-    --md1: calc(var(--max-width-container) + 12px);
-    --md2: 992px;
-    --md3: 768px;
-    --md4: 320px;
-
-    /* Цвета */
-    --color-background: "нету";
-
+    /* Colors */
     --color-bg1: #FFFFFF;
     --color-bg2: #F2F2F2;
     --color-bg3: #E5E5E5;
@@ -32,14 +24,12 @@
 
     --text-color-primary: #222222;
     --text-color-primary2: #FFFFFF;
-    --text-color-white: #FFFFFF;
     --text-color-secondary: #666666;
 
 
-    /* Controls */
+    /* Controls Color */
     --color-error: #FF5437;
     --color-ui-focus-outline: #5AB0FF;
-
 }
 
 
