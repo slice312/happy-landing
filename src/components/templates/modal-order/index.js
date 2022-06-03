@@ -1,11 +1,13 @@
 import "./styles.css";
-import {config} from "/src/config";
 import {Utils} from "/src/utils";
 import {Validator} from "./validation/validator";
 import {Api} from "/src/api";
 
 
-const renderModal = () => {
+let plansConfig = [];
+
+const renderModal = (plans) => {
+    plansConfig = plans;
     setOutSideClickHandler();
     setCloseButtonHandler();
     renderPlanRadioButtons();
@@ -31,20 +33,18 @@ const setCloseButtonHandler = () => {
 };
 
 const renderPlanRadioButtons = () => {
-    const plans = config.plans;
-
-    Utils.setTextToElement("plan-radio-button-label1", plans[0].name);
-    Utils.setTextToElement("plan-radio-button-label2", plans[1].name);
-    Utils.setTextToElement("plan-radio-button-label3", plans[2].name);
+    Utils.setTextToElement("plan-radio-button-label1", plansConfig[0].name);
+    Utils.setTextToElement("plan-radio-button-label2", plansConfig[1].name);
+    Utils.setTextToElement("plan-radio-button-label3", plansConfig[2].name);
 
     document.getElementById("btn-plan-1")
-        .setAttribute("value", plans[0].name);
+        .setAttribute("value", plansConfig[0].name);
 
     document.getElementById("btn-plan-2")
-        .setAttribute("value", plans[1].name);
+        .setAttribute("value", plansConfig[1].name);
 
     document.getElementById("btn-plan-3")
-        .setAttribute("value", plans[2].name);
+        .setAttribute("value", plansConfig[2].name);
 };
 
 
@@ -110,7 +110,7 @@ const setPlan = (selectedPlan) => {
         setMostExpensivePlan();
     } else {
         const form = document.getElementById("modal-order-form");
-        const plan = config.plans[selectedPlan - 1];
+        const plan = plansConfig[selectedPlan - 1];
         const radio = Array.from(form.elements.plan)
             .find(x => x.value === plan.name);
 
@@ -121,7 +121,7 @@ const setPlan = (selectedPlan) => {
 
 const setMostExpensivePlan = () => {
     const form = document.getElementById("modal-order-form");
-    const sortedByPrice = config.plans.slice()
+    const sortedByPrice = plansConfig.slice()
         .sort((x, y) => y.price - x.price);
 
     const radio = Array.from(form.elements.plan)

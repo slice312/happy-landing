@@ -1,10 +1,9 @@
 import "./styles.css";
-import {config} from "/src/config";
 
 
-export const renderHeaderNavBar = () => {
+export const renderHeaderNavBar = (appStoreLink) => {
     setOpenCloseMenuHandlers();
-    setButtonsHandlers();
+    setButtonsHandlers(appStoreLink);
 };
 
 const setOpenCloseMenuHandlers = () => {
@@ -21,7 +20,7 @@ const toggleMobileNavMenu = () => {
     menu.classList.toggle("nav-bar__menu_active");
 };
 
-const setButtonsHandlers = () => {
+const setButtonsHandlers = (appStoreLink) => {
     const btnGetApp = document.getElementById("nav-btn-get-app");
-    btnGetApp.onclick = () => window.open(config.appStoreLink, "_blank", "noopener,noreferrer");
+    btnGetApp.onclick = () => window.open(appStoreLink, "_blank", "noopener,noreferrer");
 };

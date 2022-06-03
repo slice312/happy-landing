@@ -1,8 +1,7 @@
 import "./styles.css";
-import {config} from "/src/config";
 
 
-export const renderDownload = () => {
-    const appStoreLink = document.getElementById("download-app-store-link");
-    appStoreLink.setAttribute("href", config.appStoreLink);
+export const renderDownload = (appStoreLink) => {
+    const appStoreLinkElem = document.getElementById("download-app-store-link");
+    appStoreLinkElem.setAttribute("href", appStoreLink);
 };

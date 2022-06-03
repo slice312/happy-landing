@@ -33,6 +33,10 @@ const prodConfig =  {
                 {
                     from: "./src/assets",
                     to: "./assets"
+                },
+                {
+                    from: "./config.json",
+                    to: "./config.json"
                 }
             ]
         }),
@@ -84,6 +88,10 @@ const devConfig = {
                 {
                     from: "./src/assets",
                     to: "./assets"
+                },
+                {
+                    from: "./config.json",
+                    to: "./config.json"
                 }
             ]
         }),

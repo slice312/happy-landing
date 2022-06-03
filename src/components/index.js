@@ -11,14 +11,14 @@ import {renderDownload} from "./organisms/download";
 import {ModalOrder} from "./templates/modal-order";
 
 
-export const renderComponents = () => {
-    renderHeaderNavBar();
-    renderAdCountdownTimer();
+export const renderComponents = (config) => {
+    renderHeaderNavBar(config.appStoreLink);
+    renderAdCountdownTimer(config.timerEndDate);
     renderAppPreview();
     renderThemeDemoBlock();
-    renderPricing();
-    renderTestimonials();
-    renderDownload();
+    renderPricing(config.plans);
+    renderTestimonials(config.testimonials);
+    renderDownload(config.appStoreLink);
 
-    ModalOrder.renderModal();
+    ModalOrder.renderModal(config.plans);
 };

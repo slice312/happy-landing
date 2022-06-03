@@ -1,11 +1,9 @@
 import "./styles.css";
-import {config} from "/src/config.js";
 import {Utils} from "/src/utils";
 import {ModalOrder} from "/src/components/templates/modal-order";
 
 
-export const renderPricing = () => {
-    const plans = config.plans;
+export const renderPricing = (plans) => {
 
     Utils.setTextToElement("pricing-plan-title1", plans[0].name);
     Utils.setTextToElement("pricing-plan-price1", "$" + plans[0].price);

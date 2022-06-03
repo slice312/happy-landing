@@ -3,8 +3,7 @@ import {config} from "/src/config.js";
 import {Utils} from "/src/utils";
 
 
-export const renderTestimonials = () => {
-    const testimonials = config.testimonials;
+export const renderTestimonials = (testimonials) => {
 
     Utils.setTextToElement("user-card-comment1", testimonials[0].text);
     Utils.setTextToElement("user-card-name1", testimonials[0].name);

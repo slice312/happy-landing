@@ -1,6 +1,11 @@
 import {renderComponents} from "/src/components";
+import {getConfig} from "/src/config";
 
 
 export const app = () => {
-    renderComponents();
+    getConfig()
+        .then(config => {
+            renderComponents(config);
+            console.log();
+        });
 };

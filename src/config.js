@@ -1,10 +1,4 @@
-import configJson from "/config.json" assert {type: "json"};
 import {Utils} from "./utils";
-
-
-configJson.timerEndDate = (configJson.timerEndDate)
-    ? Utils.Date.parseDateWithDefaultFormat(configJson.timerEndDate)
-    : new Date();
 
 
 /**
@@ -21,9 +15,23 @@ configJson.timerEndDate = (configJson.timerEndDate)
  */
 
 /**
+ * @typedef Config
  * @property {Plan[]} plans
  * @property {Testimonial[]} testimonials
  * @property {Date} timerEndDate
  * @property {string} appStoreLink
  */
-export const config = Object.freeze(configJson);
+
+
+/**
+ * @returns {Promise<Config>}
+ */
+export const getConfig = async () => {
+    const response = await fetch("./config.json");
+    const config = await response.json();
+    config.timerEndDate = (config.timerEndDate)
+        ? Utils.Date.parseDateWithDefaultFormat(config.timerEndDate)
+        : new Date();
+
+    return config;
+}
