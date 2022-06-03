@@ -56,6 +56,11 @@
     .navbar__img {
         margin: 0;
     }
+
+    .header-nav-bar {
+        height: 70px;
+    }
+
     .nav-bar__menu {
         position: fixed;
         top: 0;

@@ -1,34 +1,31 @@
 .modal-order {
     position: fixed;
-    width: 100vw;
-    height: 100vh;
     top: 0;
+    bottom: 0;
+    right: 0;
     left: 0;
-    z-index: 5;
-
+    background: rgba(0,0,0,.5);
+    overflow: auto;
+    z-index: 10;
     visibility: hidden;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 8%;
-    overflow-y: scroll;
 }
 
 .modal-order_open {
     visibility: visible;
 }
 
-.modal-order__bg {
-    position: absolute;
-    background: #000000;
-    opacity: 35%;
-    width: 100%;
-    height: 120%;
+.modal-order__wrapper {
+    width: 500px;
+    min-height: 100%;
+
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
 }
 
 .modal-order__container {
     position: relative;
+    margin: 50px 0;
     width: 506px;
     height: 815px;
 
@@ -152,7 +149,37 @@
 
 
 @media (max-width: 500px) {
+    .modal-order__wrapper {
+        width: 100%;
+        height: auto;
+    }
     .modal-order__container {
-        padding: 38px 40px 56px 40px;
+        margin: 0;
+        padding: 38px 50px 20px 50px;
+    }
+
+    .modal-order__input-name {
+        margin-top: 5px;
+    }
+}
+
+
+@media (max-width: 410px) {
+    .modal-order__wrapper {
+        width: 100%;
+    }
+
+    .modal-order__container {
+        margin: 0;
+        padding: 38px 25px 25px 25px;
+    }
+
+    .modal-order__title-wrap {
+        width: 100%;
+    }
+
+    .modal-order__title {
+        font-size: 18px;
+        line-height: 20px;
     }
 }
