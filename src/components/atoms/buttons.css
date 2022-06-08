@@ -29,6 +29,7 @@
 
 
 .burger-menu-btn {
+    /* TODO убрать*/
     display: none;
     background-color: transparent;
 }

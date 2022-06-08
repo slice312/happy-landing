@@ -4,8 +4,5 @@ import {getConfig} from "/src/config";
 
 export const app = () => {
     getConfig()
-        .then(config => {
-            renderComponents(config);
-            console.log();
-        });
+        .then(config => renderComponents(config));
 };

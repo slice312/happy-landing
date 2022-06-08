@@ -6,11 +6,44 @@ module.exports = {
     },
     plugins: ["import"],
     rules: {
+        "max-len": ["warn", 150], // максимальная длина строки
+        "max-statements-per-line": ["warn", {max: 1}], // ограничение на кол-во выражений в 1 строке
         semi: ["error", "always"],
-        quotes: ["warn", "double"],
         "comma-dangle": ["warn"],
         "no-multiple-empty-lines": "off",
         indent: ["warn", 4, {SwitchCase: 1}],
-        "import/no-relative-parent-imports": "error"
+
+        /* variables */
+        "no-var": "error", // запрет на использование keyword `var`
+        "prefer-const": "warn", // если можно, то использовать const
+        "no-const-assign": "error", // ошибка при изменении const
+        "no-unused-vars": ["warn", {vars: "local", args: "none"}], // неиспользуемые переменные
+
+        /* literals */
+        "prefer-regex-literals": "warn", // использовать регекс литерал вместо конструктора RegExp
+        "quotes": ["warn", "double"], // кавычки в строковых литералах
+
+        /* imports */
+        "import/no-relative-parent-imports": "error", // использование относительных импортов из родительской директории
+        "no-duplicate-imports": ["error"],  // повторный импорт одного и того же модуля
+
+        /* if else */
+        "no-else-return": ["warn", {allowElseIf: false}],
+        "no-lonely-if": ["warn"],
+
+        /* function */
+        "prefer-arrow-callback": "warn", // в коллбеках использовать arrow function
+        "arrow-parens": ["off"], // требование аргумент arrow function обарачивать в скобки
+        "arrow-spacing": ["warn", {before: true, after: true}], // пробелы вокруг => в arrow function
+        "func-call-spacing": ["warn", "never"], // не ставить пробелы между именем функции и скобками, вызовом функции
+
+        /* object */
+        "key-spacing": ["warn", {beforeColon: false, afterColon: true}], // пробел перед и после двоеточия в объекте
+        "object-curly-spacing": ["warn", "never"], // пробел между скобками объекта
+
+        /* other spacing */
+        "keyword-spacing": ["warn"], // пробелы вокруг ключевых слова (if, while и т.д)
+        "array-bracket-spacing": ["warn", "never"], // пробел между скобками массива
+        "comma-spacing": ["warn", {after: true}] // пробел после запятой
     }
 };

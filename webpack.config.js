@@ -71,7 +71,7 @@ const devConfig = {
     },
     devServer: {
         port: 5007,
-        static : "./build",
+        static: "./build",
         watchFiles: ["./src/index.html"],
         hot: true
     },

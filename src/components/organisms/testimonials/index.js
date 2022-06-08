@@ -1,5 +1,4 @@
 import "./styles.css";
-import {config} from "/src/config.js";
 import {Utils} from "/src/utils";
 
 

@@ -34,4 +34,4 @@ export const getConfig = async () => {
         : new Date();
 
     return config;
-}
+};
