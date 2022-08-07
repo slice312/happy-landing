@@ -1,10 +1,8 @@
 const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const MiniCssExtractWebpackPlugin = require("mini-css-extract-plugin");
-const CssMinimizerWebpackPlugin = require("css-minimizer-webpack-plugin");
-
-const CopyWebpackPlugin = require("copy-webpack-plugin");
-const {CleanWebpackPlugin} = require("clean-webpack-plugin");
+const HtmlPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 
 module.exports = (env, argv) => {
@@ -18,17 +16,18 @@ const prodConfig =  {
     entry: "./src/index.js",
     output: {
         filename: "bundle.[contenthash].js",
-        path: path.resolve(__dirname, "./build")
+        path: path.resolve(__dirname, "./build"),
+        clean: true
     },
     plugins: [
-        new HtmlWebpackPlugin({
+        new HtmlPlugin({
             template: "./src/index.html",
             inject: "body"
         }),
-        new MiniCssExtractWebpackPlugin({
+        new MiniCssExtractPlugin({
             filename: "styles.[contenthash].css"
         }),
-        new CopyWebpackPlugin({
+        new CopyPlugin({
             patterns: [
                 {
                     from: "./src/assets",
@@ -39,15 +38,14 @@ const prodConfig =  {
                     to: "./config.json"
                 }
             ]
-        }),
-        new CleanWebpackPlugin()
+        })
     ],
     module: {
         rules: [
             {
                 test: /\.css$/,
                 use: [
-                    MiniCssExtractWebpackPlugin.loader,
+                    MiniCssExtractPlugin.loader,
                     "css-loader"
                 ]
             }
@@ -55,7 +53,7 @@ const prodConfig =  {
     },
     optimization: {
         minimizer: [
-            new CssMinimizerWebpackPlugin(),
+            new CssMinimizerPlugin(),
             "..."
         ]
     }
@@ -76,14 +74,14 @@ const devConfig = {
         hot: true
     },
     plugins: [
-        new HtmlWebpackPlugin({
+        new HtmlPlugin({
             template: "./src/index.html",
             inject: "body"
         }),
-        new MiniCssExtractWebpackPlugin({
+        new MiniCssExtractPlugin({
             filename: "styles.css"
         }),
-        new CopyWebpackPlugin({
+        new CopyPlugin({
             patterns: [
                 {
                     from: "./src/assets",
@@ -94,15 +92,14 @@ const devConfig = {
                     to: "./config.json"
                 }
             ]
-        }),
-        new CleanWebpackPlugin()
+        })
     ],
     module: {
         rules: [
             {
                 test: /\.css$/,
                 use: [
-                    MiniCssExtractWebpackPlugin.loader,
+                    MiniCssExtractPlugin.loader,
                     "css-loader"
                 ]
             }
