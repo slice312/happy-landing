@@ -1,5 +1,10 @@
+<h1 align="center">Happy Landing game</h1>
+<h3 align="center">
+    <a href="https://slice312.github.io/happy-landing/">Visit the live app</a>
+</h3>
 
 # About
+Landing page
 + Page adapted to the minimum screen width 320 pixels
 + The project uses ES6 modules, so you can't just open the `index.html` file through the file system, you need to get the page from the local server.
 
