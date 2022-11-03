@@ -134,6 +134,18 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/index.css":
+/*!***********************!*\
+  !*** ./src/index.css ***!
+  \***********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./src/shared/styles/index.css":
 /*!*************************************!*\
   !*** ./src/shared/styles/index.css ***!
@@ -1084,12 +1096,14 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _shared_styles_index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./shared/styles/index.css */ "./src/shared/styles/index.css");
-/* harmony import */ var _app__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./app */ "./src/app/index.js");
+/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.css */ "./src/index.css");
+/* harmony import */ var _app__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app */ "./src/app/index.js");
 
 
 
 
-document.addEventListener("DOMContentLoaded", _app__WEBPACK_IMPORTED_MODULE_1__.app);
+
+document.addEventListener("DOMContentLoaded", _app__WEBPACK_IMPORTED_MODULE_2__.app);
 })();
 
 /******/ })()
