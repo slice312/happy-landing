@@ -1,4 +1,4 @@
-<h1 align="center">Happy Landing game</h1>
+<h1 align="center">Happy Landing</h1>
 <h3 align="center">
     <a href="https://slice312.github.io/happy-landing/">Visit the live app</a>
 </h3>
